@@ -1,0 +1,39 @@
+{
+  "name": "ryan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^0.5.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sassdoc": "^1.3.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.3",
+    "mathsass": "^0.10.1",
+    "node-normalize-scss": "^3.0.0",
+    "owl.carousel": "^2.2.0",
+    "run-sequence": "^2.2.0",
+    "sassdoc": "^2.3.0",
+    "typi": "^3.1.1"
+  },
+  "dependencies": {
+    "chart.js": "^2.7.0",
+    "lazysizes": "^4.0.0",
+    "owl.carousel": "^2.2.0"
+  }
+}
