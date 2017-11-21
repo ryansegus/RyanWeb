@@ -1,0 +1,62 @@
+.accordion {
+    h2 {
+        display: flex;
+        justify-content: space-between;
+        text-transform: capitalize;
+        color: dimgray;
+        border-bottom: 1px solid $primaryColor;
+        padding: $pad/2;
+        margin: 0;
+        @extend %transition;
+        transition-delay: 200ms;
+        span {
+            align-self: center;
+        }
+        &.active {
+            border-bottom: 0px transparent;
+        }
+    }
+    >div {
+        position: relative;
+        display: none;
+        padding: ($pad/2) 0;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            background: $primaryColor;
+            opacity: 0.8;
+        }
+    }
+    ul {
+        list-style: none;
+        text-indent: $pad;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0;
+            padding: 0 0 ($pad/3) 0;
+            &:before {
+                content: "• ";
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+.position {
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    span {
+        color: $primaryColor;
+    }
+}
+
+.occupazione {
+    @extend h3;
+    text-align: left;
+}

@@ -1,0 +1,240 @@
+#btnInfographics {
+    display: none;
+}
+
+.infographics {
+    @extend .boxPadding;
+    h1,
+    h2 {
+        color: gray;
+        font-weight: 100;
+        &:before,
+        &:after {
+            border-color: gray;
+        }
+    }
+}
+
+/* LANGUAGE */
+
+.languagesHolder {
+    @extend .flexRowNoWrap;
+    justify-content: space-around;
+    max-width: map-get($bp, mobile-landscape);
+    margin: 0 auto;
+    @media (min-width: map-get($bp, mobile-landscape)) and (orientation: landscape) {}
+    > div,
+    .chartHolder {
+        position: relative;
+        flex: 0 0 33%;
+        @media (min-width: map-get($bp, mobile-landscape)) and (orientation: landscape) {
+            flex: 0 0 25%;
+        }
+        div:first-child {
+            position: relative;
+        }
+    }
+    .langLegend {
+        @include centerer();
+        font-family: 'Encode Sans Condensed', sans-serif;
+        font-size: 1.5em;
+        font-weight: 100;
+        text-transform: capitalize;
+        color: gray;
+        user-select: none;
+        cursor: default;
+    }
+}
+
+
+/* SKILLS */
+
+$skills: ( technicals: ( web: 8, print: 8, branding: 6, illustration: 4, layout: 4), personal: (creativity: 9, leadership: 8, organization: 6));
+#skills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    ul {
+        flex: 0 0 49%;
+        @extend .flexColNoWrap;
+
+        &:nth-child(-n+2) {
+            margin-bottom: 20px;
+        }
+        &:nth-child(odd) {
+            li {
+                align-self: flex-end;
+                user-select: none;
+                cursor: default;
+            }
+        }
+        &:nth-child(even) {
+            justify-content: space-around;
+            li {
+                align-self: flex-start;
+                @extend .flexRowNoWrap;
+                margin-left: ($pad/3);
+                > div {
+                    width: 10px;
+                    height: 10px;
+                    margin: 0 0.02em;
+                    border-radius: 50%;
+                    transform: scale(0.8);
+                    transition-property: transform;
+                    transition: all 0.3s cubic-bezier(.37, .1, .64, .93);
+                    &:hover {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@each $class,
+$num in (map-merge(map-get($skills, technicals), map-get($skills, personal))) {
+    .#{$class} {
+        > div {
+            border: 1px solid #1d1d1d;
+            @extend .bgColorSecondary;
+            &:nth-child(-n + #{$num}) {
+                @extend .bgColorPrimary;
+                border-color: $primaryColor;
+            }
+        }
+    }
+}
+
+
+/* Sweep To Left */
+
+.hvr-sweep-to-left {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+.hvr-sweep-to-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $primaryColor;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-left:hover,
+.hvr-sweep-to-left:focus,
+.hvr-sweep-to-left:active {
+    color: white;
+}
+
+.hvr-sweep-to-left:hover:before,
+.hvr-sweep-to-left:focus:before,
+.hvr-sweep-to-left:active:before {
+    transform: scaleX(1);
+}
+
+
+/* INTERESTS */
+
+#interests {
+    @extend .flexRowNoWrap;
+    justify-content: space-between;
+    > div {
+        &:first-of-type,
+        &:last-of-type {
+            flex: 0 2 18px;
+            @media (min-width: map-get($bp, mobile-landscape)) and (orientation: landscape) {
+                flex: 0 2 13px;
+            }
+        }
+        &:first-of-type {
+            align-self: flex-end;
+        }
+        &:nth-of-type(2) {
+            flex: 2 0 80%;
+            @extend .flexColNoWrap;
+            justify-content: center;
+            @media (min-width: map-get($bp, mobile-landscape)) {
+                flex-flow: row nowrap;
+                flex: 0 0 80%;
+            }
+
+            ul {
+                padding: ($pad/2);
+                @extend .flexColNoWrap;
+                align-items: center;
+
+                &:first-of-type {
+                    //                    color: red;
+                }
+                li {
+                    svg {
+                        width: 30px;
+                        max-height: 30px;
+                        fill: #D80027;
+                    }
+                }
+            }
+            > div {
+                flex: 1;
+            }
+        }
+        &:last-of-type {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+/* WHAT I USE */
+
+#whatiuse {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    > div,
+    .chartHolder {
+        position: relative;
+        flex: 0 0 22%;
+        margin: ($pad/4);
+        z-index: 3;
+        @media (min-width: map-get($bp, mobile-landscape)) and (orientation: landscape) {
+                flex: 0 0 17%;
+            }
+        div:first-child {
+            position: relative;
+        }
+    }
+    .langLegend {
+        @include centerer();
+        width: 70%;
+        height: 70%;
+        user-select: none;
+        cursor: default;
+        border-radius: 50%;
+        z-index: -5;
+        svg {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 50%;
+            height: auto;
+            fill: white;
+        }
+    }
+}

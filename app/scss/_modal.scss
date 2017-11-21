@@ -1,0 +1,58 @@
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: color(primary, trans);
+    z-index: 30;
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        div {
+            &:first-child {
+                cursor: pointer;
+                align-self: flex-end;
+            }
+        }
+        h1 {
+            color: white;
+            padding: ($pad/2) $pad;
+            text-transform: capitalize;
+            &:before,
+            &:after {
+                border-color: white;
+            }
+        }
+        svg {
+            margin: 0;
+            padding: $pad;
+            width: 30px;
+            height: 30px;
+        }
+        figure {
+            width: 90%;
+            img {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+                border: 3px solid #1d1d1d;
+            }
+        }
+        figcaption {
+            color: white;
+            p {
+                padding: $pad 0;
+                transition-delay: 2s;
+//                transform: translate3d(0, 100%, 0);
+                //            transform: translateY(100px);
+                &.active {
+//                   transform: translate3d(0, 0, 0); 
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,301 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $primaryColor;
+    opacity: 0;
+    visibility: hidden;
+    @extend %transition;
+    z-index: 100;
+    p {
+        @include centerer();
+        text-align: center;
+        font-weight: 100;
+        font-size: 1.5em;
+        user-select: none;
+        color: white;
+    }
+}
+
+header {
+    @extend %transition;
+    .headerContainer {
+        position: unset;
+        height: 100vh;
+        z-index: 3;
+        @extend %transition;
+    }
+    .flexWrap {
+        height: 100vh;
+        max-width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        filter: blur(0);
+        @extend %transition;
+        > div:nth-of-type(2) div {
+            display: inline-block;
+        }
+    }
+}
+
+#page {
+    @extend .displayNone;
+    @extend %transition;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#btnInfographics {
+    @extend .displayNone;
+    @extend %transition;
+    width: 35px;
+    height: 35px;
+}
+
+#infographics {
+    @extend .displayNone;
+    @extend %transition;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+footer {
+    background: #fcae00;
+    @extend %transition;
+    @extend .displayNone;
+    box-sizing: border-box;
+}
+
+section {
+    @extend %transition;
+}
+
+.grid {
+    @extend %transition;
+    position: unset;
+    display: unset;
+    box-sizing: border-box;
+    &.IsActive {
+        position: unset;
+        display: unset;
+        @extend %transition;
+        #page,
+        #infographics,
+        footer {
+            display: block;
+            @extend %transition;
+            opacity: 1;
+        }
+        .headerContainer {
+            position: fixed;
+            width: 100%;
+            height: 60px;
+        }
+        .flexWrap {
+            position: fixed;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            > div:first-of-type svg {
+                max-width: 50px;
+            }
+            > div {
+                &:last-of-type {
+                    text-align: right;
+                    flex-grow: 1;
+                    margin-right: ($pad/2);
+                    svg {
+                        width: 30px;
+                    }
+                }
+            }
+        }
+        #page {
+            padding-top: 60px;
+        }
+    }
+}
+
+/*@media screen and (min-width: (map-get($bp, mobile-landscape))) {
+     Layout with CSS Grid 
+    @supports (display: grid) {
+        .grid {
+            &.IsActive {
+                display: grid;
+            }
+        }
+    }
+}*/
+
+@media screen and (min-width: (map-get($bp, mobile-landscape))) and (orientation: landscape) {
+    /* Layout with CSS Grid */
+    @supports (display: grid) {
+
+        .grid.IsActive {
+            display: grid;
+            grid-template-columns: 8% 92%;
+            grid-template-rows: repeat(3, auto);
+
+
+            header {
+                grid-column: 1;
+                grid-row: 1 / span 3;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                box-sizing: border-box;
+                .headerContainer {
+                    position: unset;
+                    width: 100%;
+                    height: 100vh;
+                }
+                .flexWrap {
+                    position: unset;
+                    height: 100vh;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    > div:first-of-type {
+                        padding-top: $pad;
+                        svg {
+                            max-width: 60px;
+                        }
+                    }
+                    > div:nth-of-type(2) {
+                        display: none;
+                    }
+                    > div:last-of-type {
+                        flex-grow: 0;
+                        margin: 0;
+                        svg {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+            #page,
+            #infographics,
+            footer {
+                display: block;
+                opacity: 1;
+            }
+            #page,
+            #infographics,
+            footer {
+                grid-column: 2;
+            }
+            #page {
+                padding: 0;
+                grid-row: 1;
+            }
+            #infographics {
+                grid-row: 2;
+            }
+
+            footer {
+                grid-row: 3;
+            }
+        }
+        .grid.IsActive:before {
+            content: "";
+            @include cover-background('#000', '../img/bg/landscape.jpg', 'center', 'center', 'fixed');
+            grid-column: 1 / 5;
+            grid-row: 1 / 3;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            filter: grayscale(1);
+        }
+    }
+
+}
+
+@media screen and (min-width: (map-get($bp, desktop))) and (orientation: landscape) {
+    @supports (display: grid) {
+        .grid.IsActive {
+            display: grid;
+            grid-template-columns: 15% 20% 50% 15%;
+            grid-template-rows: repeat(2, auto);
+
+            header {
+                grid-column: 2;
+                grid-row: 1 / span 2;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                box-sizing: border-box;
+                .flexWrap {
+                    justify-content: center;
+                    > div:first-of-type {
+                        padding: 0;
+                        svg {
+                            max-width: 120px;
+                        }
+                    }
+                    > div:nth-of-type(2) {
+                        display: inline-block;
+                        font-size: 2em;
+                        line-height: 1em;
+                        div {
+                            display: block;
+                        }
+                    }
+                    > div:last-of-type {
+                        padding-top: $pad;
+                    }
+                }
+            }
+            #page {
+                display: block;
+                grid-column: 3;
+                grid-row: 1;
+                padding: 0;
+                z-index: 1;
+            }
+            footer {
+                display: block;
+                grid-column: 3;
+                grid-row: 2;
+                background-color: white;
+                color: #1d1d1d;
+            }
+            #infographics {
+                grid-column: 3;
+                grid-row: 1 / 3;
+                visibility: hidden;
+                transform: translateX(100%);
+                z-index: 5;
+                &.IsActive {
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+            }
+            #btnInfographics {
+                display: block;
+                opacity: 1;
+                grid-column: 4;
+                grid-row: 1;
+                position: sticky;
+                top: 50%;
+                transform: translate(0, -50%);
+                z-index: 12;
+            }
+            #infographicsCover {
+                grid-column: 4;
+                grid-row: 1 / span 2;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                box-sizing: border-box;
+                z-index: 10;
+                @include cover-background('#000', '../img/bg/landscape.jpg', 'center', 'center', 'fixed');
+                filter: grayscale(1);
+            }
+        }
+    }
+}

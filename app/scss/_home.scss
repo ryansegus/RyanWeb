@@ -1,0 +1,51 @@
+.flexWrap {
+    > div:first-of-type svg {
+        width: 400px;
+        max-width: 140px;
+        height: auto;
+        @media screen and (min-width: (map-get($bp, mobile-landscape))) and (orientation: landscape) {
+            max-width: 120px;
+        }
+        @media screen and (min-width: (map-get($bp, tablet-wide))) and (orientation: landscape) {
+            max-width: 200px;
+        }
+        @media screen and (min-width: (map-get($bp, tablet-wide))) and (orientation: portrait) {
+            max-width: 200px;
+        }
+        @media screen and (min-width: (map-get($bp, desktop))) and (orientation: landscape) {
+            max-width: 200px;
+        }
+
+    }
+
+}
+
+.homeBg,
+.virtualH {
+    background-image: url('data:image/jpeg;base64,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');
+    filter: none;
+    transition: -webkit-filter 0s 0.3s linear, filter 0s 0.3s linear;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.blur-up {
+    filter: blur(5px);
+    transition: filter 1400ms, -webkit-filter 1400ms;
+}
+
+.blur-up.lazyloaded {
+    filter: blur(0);
+}
+
+.fade-box .lazyload,
+.fade-box .lazyloading {
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.fade-box img.lazyloaded {
+    opacity: 1;
+}

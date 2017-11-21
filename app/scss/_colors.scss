@@ -1,0 +1,53 @@
+$primaryColor: #8dc63f;
+
+$palettes: (
+secondary: #e127b6,
+primary: (
+base: $primaryColor,
+light: lighten($primaryColor, 10%),
+dark: darken($primaryColor, 10%),
+trans: transparentize($primaryColor, 0.1)
+),
+mono: (
+black: #000,
+dark: #333,
+base-dark: #454545,
+base: #666,
+light: #888,
+Gainsboro: gainsboro,
+whitesmoke: whitesmoke,
+white: #fff,
+),
+contextual: (
+success: #77b300,
+info: #00c5ff,
+warning: #fcae00,
+danger: #e60700,
+),
+blue: (
+SummerSky: #27AAE1,
+),
+brand: (
+
+macaroni: #eba43c,
+orange: #f37930,
+green: #75a832,
+teal: #138f87,
+darker-gray: #466368,
+dark-gray: #5c656a,
+medium-gray: #9baeb2,
+light-gray: #919598,
+dark-blue: #1e3037,
+),
+social: (
+facebook: "#3B5998",
+twitter: "#3CF",
+linkedin: "#0077b5",
+instagram: "#c13584",
+    googleplus: "#dd4b39",
+    behance: "#1769ff",
+    codepen: "#0ebeff",
+)
+    
+);
+

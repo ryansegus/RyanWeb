@@ -1,0 +1,209 @@
+/// Helper mixin to size elements in a single line.
+/// This mixin is essentially a short hand to define
+/// both `width` and `height` simultaneously.
+///
+/// @group shorthand
+/// @author Hugo Giraudel
+///
+/// @param {Length} $width - Element's width
+/// @param {Length} $height [$width] - Element's height
+/// @output `width` and `height`
+///
+/// @example scss - Sizing `.foo`
+///   .foo {
+///     @include size(100%, 3em);
+///   }
+.btn {
+    svg {
+        max-width: 40px;
+        height: auto;
+        cursor: pointer;
+        fill: white;
+        transition: fill 500ms;
+    }
+    &:hover svg {
+        fill: $primaryColor;
+    }
+}
+
+#btnInfographics {
+    svg {
+        width: 50px;
+        max-width: 35px;
+        height: auto;
+        cursor: pointer;
+        margin-left: $pad;
+        @extend %transition;
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.buttonWrap {
+    width: $buttonSize;
+    height: $buttonSize;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid $primaryColor;
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: all 0.4s ease;
+    transition-delay: 0.4s;
+    .inner {
+        background: white;
+        width: 120%;
+        margin-left: -10%;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        span {
+            display: block;
+            background: $primaryColor;
+            height: 2px;
+            width: 20%;
+            position: absolute;
+        }
+
+        span.left {
+            left: 50%;
+        }
+
+        span.right {
+            right: 50%;
+        }
+    }
+    .inner.right {
+        transform: rotate(45deg);
+    }
+    .inner.left {
+        transform: rotate(-45deg);
+    }
+}
+
+.buttonWrap.state {
+    span.right {
+        animation: animateRightOut 1.2s linear;
+    }
+    span.left {
+        animation: animateLeftOut 1.2s linear;
+    }
+}
+
+.buttonWrap.active {
+    transform: rotate(0deg);
+    span.right {
+        animation: animateRight 1.2s linear;
+    }
+    span.left {
+        animation: animateLeft 1.2s linear;
+    }
+}
+
+@keyframes animateLeft {
+    0% {
+        opacity: 1;
+        left: 50%;
+    }
+    20% {
+        opacity: 0;
+        left: 100%;
+    }
+    50% {
+        opacity: 0;
+        left: 100%;
+    }
+    80% {
+        opacity: 0;
+        left: 100%;
+    }
+    90% {
+        opacity: 1;
+        left: 50%;
+    }
+}
+
+@keyframes animateRight {
+    0% {
+        opacity: 1;
+        right: 50%;
+    }
+    20% {
+        opacity: 0;
+        right: 100%;
+    }
+    50% {
+        opacity: 0;
+        right: 100%;
+    }
+    80% {
+        opacity: 0;
+        right: 100%;
+    }
+    90% {
+        opacity: 1;
+        right: 50%;
+    }
+}
+
+@keyframes animateLeftOut {
+    0% {
+        opacity: 1;
+        left: 50%;
+    }
+    20% {
+        opacity: 0;
+        left: 100%;
+    }
+    50% {
+        opacity: 0;
+        left: 100%;
+    }
+    80% {
+        opacity: 0;
+        left: 100%;
+    }
+    90% {
+        opacity: 1;
+        left: 50%;
+    }
+}
+
+@keyframes animateRightOut {
+    0% {
+        opacity: 1;
+        right: 50%;
+    }
+    20% {
+        opacity: 0;
+        right: 100%;
+    }
+    50% {
+        opacity: 0;
+        right: 100%;
+    }
+    80% {
+        opacity: 0;
+        right: 100%;
+    }
+    90% {
+        opacity: 1;
+        right: 50%;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(45deg);
+    }
+    20% {
+        transform: rotate(45deg);
+    }
+    80% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
