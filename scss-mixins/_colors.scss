@@ -1,0 +1,18 @@
+/*
+* Better function for color palettes using Sass maps
+* Link: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+* Usage: color: palette(brand,tan);
+*/
+/*@function palette($palette, $tone: 'base') {
+    @return map-get( map-get($palettes, $palette), $tone );
+}*/
+// retrieve color from $colors map ie. `color(base, primary)`
+@function color($color-name, $color-variant:null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($palettes, $color-name), $color-variant);
+  } @else {
+    @return map-get($palettes, $color-name);
+  }
+}
