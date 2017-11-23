@@ -2717,48 +2717,6 @@ s {
   fill: white;
 }
 
-.facebook {
-  color: white;
-  background-color: "#3B5998";
-  border-color: "#3B5998";
-}
-
-.twitter {
-  color: white;
-  background-color: "#3CF";
-  border-color: "#3CF";
-}
-
-.linkedin {
-  color: white;
-  background-color: "#0077b5";
-  border-color: "#0077b5";
-}
-
-.instagram {
-  color: white;
-  background-color: "#c13584";
-  border-color: "#c13584";
-}
-
-.googleplus {
-  color: white;
-  background-color: "#dd4b39";
-  border-color: "#dd4b39";
-}
-
-.behance {
-  color: white;
-  background-color: "#1769ff";
-  border-color: "#1769ff";
-}
-
-.codepen {
-  color: white;
-  background-color: "#0ebeff";
-  border-color: "#0ebeff";
-}
-
 footer {
   background-color: #1d1d1d;
   color: white;
@@ -2788,28 +2746,56 @@ footer ul.social li svg.facebook:hover {
   fill: #3B5998;
 }
 
+footer ul.social li svg.facebook:focus {
+  outline-color: #3B5998;
+}
+
 footer ul.social li svg.twitter:hover {
   fill: #3CF;
+}
+
+footer ul.social li svg.twitter:focus {
+  outline-color: #3CF;
 }
 
 footer ul.social li svg.linkedin:hover {
   fill: #0077b5;
 }
 
+footer ul.social li svg.linkedin:focus {
+  outline-color: #0077b5;
+}
+
 footer ul.social li svg.instagram:hover {
   fill: #c13584;
+}
+
+footer ul.social li svg.instagram:focus {
+  outline-color: #c13584;
 }
 
 footer ul.social li svg.googleplus:hover {
   fill: #dd4b39;
 }
 
+footer ul.social li svg.googleplus:focus {
+  outline-color: #dd4b39;
+}
+
 footer ul.social li svg.behance:hover {
   fill: #1769ff;
 }
 
+footer ul.social li svg.behance:focus {
+  outline-color: #1769ff;
+}
+
 footer ul.social li svg.codepen:hover {
   fill: #0ebeff;
+}
+
+footer ul.social li svg.codepen:focus {
+  outline-color: #0ebeff;
 }
 
 /*# sourceMappingURL=style.css.map */
