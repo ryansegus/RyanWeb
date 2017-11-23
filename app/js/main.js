@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* ABOUT */
 $.getJSON('json/about.json', function (data) {
 
-    $('#aboutMe').html(Mustache.render("<h1>{{aboutMeTitle}}</h1><p>{{description}}</p>", data));
+    $('#aboutMe').html(Mustache.render("<h1>{{{aboutMeTitle}}}</h1><p>{{{description}}}</p>", data));
 
     typeTemplate = $('#aboutMeTypologyTmpl').html();
     typology = Mustache.to_html(typeTemplate, data);
