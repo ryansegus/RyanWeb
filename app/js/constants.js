@@ -12,14 +12,16 @@ function writeSVG(path, svg) {
 
 //writeSVG('../img/icon/apple.svg');
 
-const OBJECT = (function () {
-    'use strict';
-    var WORDS = "WORDS",
-        SVGICONS = "SVGICONS";
-    return {}
-});
+// const OBJECT = (function () {
+//     'use strict';
+//     var WORDS = "WORDS",
+//         SVGICONS = "SVGICONS";
+//     return {}
+// });
 
-const MY_OBJECT = {
+// CHECK USING CONSTANT CONST ON USEREF
+// const MY_OBJECT
+var MY_OBJECT = {
     WORDS: {
         'LEARNING': 'Imparando',
         'LearningEn': 'Imparando'
