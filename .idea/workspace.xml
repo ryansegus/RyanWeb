@@ -4,7 +4,13 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e7a2469c-6e40-4d5d-9428-53e949d0b4da" name="Default" comment="" />
+    <list default="true" id="e7a2469c-6e40-4d5d-9428-53e949d0b4da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/style.css" afterPath="$PROJECT_DIR$/app/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/style.css.map" afterPath="$PROJECT_DIR$/app/css/style.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/main.js" afterPath="$PROJECT_DIR$/app/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scss/_footer.scss" afterPath="$PROJECT_DIR$/app/scss/_footer.scss" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +22,40 @@
     <option name="CLEAR_OUTPUT_DIRECTORY" value="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="250" column="37" lean-forward="false" selection-start-line="250" selection-start-column="37" selection-end-line="250" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="86" column="31" lean-forward="false" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footer.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scss/_footer.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -24,7 +63,11 @@
       <find>&amp;amp;</find>
       <find>expTmpl</find>
       <find>const</find>
+      <find>experiencia</find>
     </findStrings>
+    <replaceStrings>
+      <replace>experience</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,11 +83,11 @@
         <option value="$PROJECT_DIR$/app/scss/style.scss" />
         <option value="$PROJECT_DIR$/app/json/footer.json" />
         <option value="$PROJECT_DIR$/app/scss/_colors.scss" />
-        <option value="$PROJECT_DIR$/app/scss/_footer.scss" />
         <option value="$PROJECT_DIR$/app/json/experience.json" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/js/constants.js" />
+        <option value="$PROJECT_DIR$/app/scss/_footer.scss" />
+        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/js/main.js" />
       </list>
     </option>
@@ -231,6 +274,23 @@
               <item name="ryanWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="ryanWeb" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ryanWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ryanWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ryanWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ryanWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ryanWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ryanWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -359,7 +419,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16805000" />
+    <option name="totallyTimeSpent" value="20469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="990" extended-state="6" />
@@ -370,10 +430,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.61791384" sideWeight="0.2390625" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3004535" sideWeight="0.080729164" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.61791384" sideWeight="0.7609375" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3004535" sideWeight="0.9192708" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -524,16 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
           <caret line="115" column="10" lean-forward="false" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
-          <folding>
-            <marker date="1512045842114" expanded="true" signature="2976:3128" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3524:3526" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3530:3580" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="3618:3769" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3681:3729" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3811:3900" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3941:3971" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="4022:4098" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -551,10 +601,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1512045842082" expanded="true" signature="398:472" ph="{&quot;LEARNING&quot;: 'Imparando'...}" />
-            <marker date="1512045842082" expanded="true" signature="491:22329" ph="{&quot;MAC&quot;: '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 22.8 22.8&quot; width=&quot;512&quot; height=&quot;512&quot;&gt;&lt;title&gt;Apple&lt;/title&gt;&lt;path d=&quot;M15.8 0c0.1 0 0.1 0 0.2 0 0.1 1.6-0.5 2.8-1.2 3.7 -0.7 0.9-1.7 1.7-3.4 1.6 -0.1-1.6 0.5-2.7 1.3-3.6C13.3 0.9 14.6 0.2 15.8 0z&quot; /&gt;&lt;path d=&quot;M20.7 16.7c0 0 0 0 0 0 -0.5 1.4-1.1 2.6-1.9 3.7 -0.7 1-1.6 2.3-3.2 2.3 -1.4 0-2.3-0.9-3.7-0.9 -1.5 0-2.3 0.7-3.7 0.9 -0.2 0-0.3 0-0.5 0 -1-0.1-1.8-0.9-2.4-1.6 -1.7-2.1-3.1-4.8-3.3-8.3 0-0.3 0-0.7 0-1 0.1-2.5 1.3-4.5 2.9-5.5 0.8-0.5 2-1 3.3-0.8 0.6 0.1 1.1 0.3 1.6 0.5 0.5 0.2 1.1 0.5 1.6 0.5 0.4 0 0.8-0.2 1.1-0.3 1.1-0.4 2.2-0.9 3.7-0.6 1.7 0.3 3 1 3.7 2.2 -1.5 0.9-2.6 2.3-2.4 4.7C17.8 14.7 19.1 16 20.7 16.7z&quot;/&gt;&lt;/svg&gt;'...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -577,16 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1512045842114" expanded="true" signature="2976:3128" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3524:3526" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3530:3580" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="3618:3769" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3681:3729" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3811:3900" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3941:3971" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="4022:4098" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,16 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
           <caret line="115" column="10" lean-forward="false" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
-          <folding>
-            <marker date="1512045842114" expanded="true" signature="2976:3128" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3524:3526" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3530:3580" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="3618:3769" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3681:3729" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3811:3900" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3941:3971" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="4022:4098" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -707,10 +734,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1512045842082" expanded="true" signature="398:472" ph="{&quot;LEARNING&quot;: 'Imparando'...}" />
-            <marker date="1512045842082" expanded="true" signature="491:22329" ph="{&quot;MAC&quot;: '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 22.8 22.8&quot; width=&quot;512&quot; height=&quot;512&quot;&gt;&lt;title&gt;Apple&lt;/title&gt;&lt;path d=&quot;M15.8 0c0.1 0 0.1 0 0.2 0 0.1 1.6-0.5 2.8-1.2 3.7 -0.7 0.9-1.7 1.7-3.4 1.6 -0.1-1.6 0.5-2.7 1.3-3.6C13.3 0.9 14.6 0.2 15.8 0z&quot; /&gt;&lt;path d=&quot;M20.7 16.7c0 0 0 0 0 0 -0.5 1.4-1.1 2.6-1.9 3.7 -0.7 1-1.6 2.3-3.2 2.3 -1.4 0-2.3-0.9-3.7-0.9 -1.5 0-2.3 0.7-3.7 0.9 -0.2 0-0.3 0-0.5 0 -1-0.1-1.8-0.9-2.4-1.6 -1.7-2.1-3.1-4.8-3.3-8.3 0-0.3 0-0.7 0-1 0.1-2.5 1.3-4.5 2.9-5.5 0.8-0.5 2-1 3.3-0.8 0.6 0.1 1.1 0.3 1.6 0.5 0.5 0.2 1.1 0.5 1.6 0.5 0.4 0 0.8-0.2 1.1-0.3 1.1-0.4 2.2-0.9 3.7-0.6 1.7 0.3 3 1 3.7 2.2 -1.5 0.9-2.6 2.3-2.4 4.7C17.8 14.7 19.1 16 20.7 16.7z&quot;/&gt;&lt;/svg&gt;'...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -733,16 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1512045842114" expanded="true" signature="2976:3128" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3524:3526" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3530:3580" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="3618:3769" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3681:3729" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3811:3900" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3941:3971" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="4022:4098" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -795,14 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scss/_footer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/json/education.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -836,16 +842,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2070">
           <caret line="115" column="10" lean-forward="false" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
-          <folding>
-            <marker date="1512045842114" expanded="true" signature="2976:3128" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3524:3526" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3530:3580" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="3618:3769" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3681:3729" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3811:3900" ph="{...}" />
-            <marker date="1512045842114" expanded="true" signature="3941:3971" ph="/*...*/" />
-            <marker date="1512045842114" expanded="true" signature="4022:4098" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -853,28 +849,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1512045842082" expanded="true" signature="398:472" ph="{&quot;LEARNING&quot;: 'Imparando'...}" />
-            <marker date="1512045842082" expanded="true" signature="491:22329" ph="{&quot;MAC&quot;: '&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 22.8 22.8&quot; width=&quot;512&quot; height=&quot;512&quot;&gt;&lt;title&gt;Apple&lt;/title&gt;&lt;path d=&quot;M15.8 0c0.1 0 0.1 0 0.2 0 0.1 1.6-0.5 2.8-1.2 3.7 -0.7 0.9-1.7 1.7-3.4 1.6 -0.1-1.6 0.5-2.7 1.3-3.6C13.3 0.9 14.6 0.2 15.8 0z&quot; /&gt;&lt;path d=&quot;M20.7 16.7c0 0 0 0 0 0 -0.5 1.4-1.1 2.6-1.9 3.7 -0.7 1-1.6 2.3-3.2 2.3 -1.4 0-2.3-0.9-3.7-0.9 -1.5 0-2.3 0.7-3.7 0.9 -0.2 0-0.3 0-0.5 0 -1-0.1-1.8-0.9-2.4-1.6 -1.7-2.1-3.1-4.8-3.3-8.3 0-0.3 0-0.7 0-1 0.1-2.5 1.3-4.5 2.9-5.5 0.8-0.5 2-1 3.3-0.8 0.6 0.1 1.1 0.3 1.6 0.5 0.5 0.2 1.1 0.5 1.6 0.5 0.4 0 0.8-0.2 1.1-0.3 1.1-0.4 2.2-0.9 3.7-0.6 1.7 0.3 3 1 3.7 2.2 -1.5 0.9-2.6 2.3-2.4 4.7C17.8 14.7 19.1 16 20.7 16.7z&quot;/&gt;&lt;/svg&gt;'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="77" column="26" lean-forward="false" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="226" column="39" lean-forward="false" selection-start-line="226" selection-start-column="39" selection-end-line="226" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -890,6 +864,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scss/_footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="86" column="31" lean-forward="false" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="250" column="37" lean-forward="false" selection-start-line="250" selection-start-column="37" selection-end-line="250" selection-end-column="37" />
           <folding />
         </state>
       </provider>

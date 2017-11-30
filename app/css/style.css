@@ -2736,6 +2736,8 @@ footer ul.social li {
 }
 
 footer ul.social li svg {
+  display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
   fill: gray;
