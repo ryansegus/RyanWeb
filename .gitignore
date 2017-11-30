@@ -5,6 +5,9 @@ bin-release/
 [Oo]bj/ # FlashDevelop obj
 [Bb]in/ # FlashDevelop bin
 
+# OS or Editor folders
+.idea
+
 # Other files and folders
 .settings/
 
