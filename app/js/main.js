@@ -72,7 +72,9 @@ function showOverlay() {
             p.remove();
             el.style.visibility = 'hidden';
             el.removeAttribute('style');
-            const mySiema = new Siema({
+            // CHECK USING CONSTANT CONST ON USEREF
+            // const mySiema
+            var mySiema = new Siema({
                 loop: true
             });
 

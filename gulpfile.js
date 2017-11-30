@@ -110,10 +110,20 @@ gulp.task('useref', function () {
     return gulp.src('app/index.html')
         .pipe(useref())
         // Minifies only if it's a JavaScript file
-        .pipe(gulpIf('*.js', uglify()))
+        .pipe(gulpIf('*.js', uglify().on('error', function(e){
+            console.log(e);
+        })))
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'))
+});
+
+gulp.task('userefscripts', ['clean'], function () {
+    return gulp.src('js/*.js')
+        .pipe(uglify().on('error', function(e){
+            console.log(e);
+        }))
+        .pipe(gulp.dest('minjs'));
 });
 
 /* PENDING INTEGRATE MINIFY INDEX TO PRODUCTION */
