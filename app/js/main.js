@@ -1,7 +1,6 @@
 /* VARS */
 
 
-
 var portafoglio = [
     ['img-01.jpg', 'Grupo Menosesmas', 'Logotipo', 'Nel corso del tempo abbiamo migliorato i nostri gusti e finalmente è arrivato all&#39;immagine che riassume l&#39;essenza della nostra azienda.'],
     ['img-02.jpg', 'Natalia Marcano', 'identidad', 'Un design minimalista di biglietti personali, il cui dado fa l&#39;impatto dei clienti di questo grande architetto.'],
@@ -16,14 +15,14 @@ var portafoglio = [
 ];
 
 var skills = [
-        ['WEB', 'STAMPE', 'BRANDING', 'ILLUSTRAZIONE', 'LAYOUT'],
-        ['CREATIVITÀ', 'LEADERSHIP', 'ORGANIZZAZIONE']
+    ['WEB', 'STAMPE', 'BRANDING', 'ILLUSTRAZIONE', 'LAYOUT'],
+    ['CREATIVITÀ', 'LEADERSHIP', 'ORGANIZZAZIONE']
 
-    ]
+]
 var skillclasses = [
-            ['web', 'print', 'branding', 'illustration', 'layout'],
-        ['creativity', 'leadership', 'organization']
-        ]
+    ['web', 'print', 'branding', 'illustration', 'layout'],
+    ['creativity', 'leadership', 'organization']
+]
 
 var langObj = {
     bgColor: ["#8dc63f", "#1d1d1d"],
@@ -32,18 +31,18 @@ var langObj = {
             labelIt: "Spagnolo",
             shortName: "Es",
             value: 90
-    },
+        },
         {
             labelIt: "Inglese",
             shortName: "En",
             value: 80
-    },
+        },
         {
             labelIt: "Italiano",
             shortName: "It",
             value: 60
-    }
-  ]
+        }
+    ]
 };
 
 /* FUNCTIONS */
@@ -137,6 +136,7 @@ function makeLISTSkills(array, str, classes) {
     container.appendChild(ulDots);
     return container;
 }
+
 /* -------------------- */
 // PRELOAD IMAGES //
 /* -------------------- */
@@ -184,6 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });*/
 
+var $expCont = $id('experience');
+console.log($expCont);
 /* ----------------------------- */
 // LOAD TEMPLATES INTO SECTIONS //
 /* ---------------------------- */
@@ -197,21 +199,21 @@ $.getJSON('json/about.json', function (data) {
     typology = Mustache.to_html(typeTemplate, data);
     $('#typology').html(typology);
 
-})
+});
 
 /* EDUCATION */
 $.getJSON('json/education.json', function (data) {
     var template = $('#educationTmpl').html();
     var html = Mustache.to_html(template, data);
     $('#education').html(html);
-})
+});
 
 /* EXPERIENCE */
 $.getJSON('json/experience.json', function (data) {
     var template = $('#expTmpl').html();
     var html = Mustache.to_html(template, data);
-    $('#experiencia').html(html);
-})
+    $($expCont).html(html);
+});
 
 /* INTERESTS */
 $.getJSON('json/interests.json', function (data) {
@@ -222,19 +224,17 @@ $.getJSON('json/interests.json', function (data) {
     dislikes = $('#interestsDisLikesTmpl').html();
     dislikesText = Mustache.to_html(dislikes, data);
     $('#dislikes').html(dislikesText);
-})
+});
 
 /* FOOTER */
 $.getJSON('json/footer.json', function (data) {
-    
+
     /*$('#footer').html(Mustache.render("<h1>{{footerTitle}}</h1>", data));*/
-    
+
     template = $('#footerTmpl').html();
     html = Mustache.to_html(template, data);
     $('#footer').html(html);
-})
-
-
+});
 
 
 /* WHEN DOCUMENT RDY */
@@ -246,8 +246,9 @@ $(function () {
         loop: true
     });
 
-    // SHOW/HIDE EXPERIENCE LISTS 
-    $('.accordion .buttonWrap').click(function () {
+
+    // SHOW/HIDE EXPERIENCE LISTS
+    $('.buttonWrap').click(function ($expCont) {
         $(this).parent().parent().next('div').slideToggle(300);
         $(this).toggleClass('active');
         $(this).addClass("state");
@@ -267,7 +268,6 @@ $(function () {
         }
         return orientation;
     }*/
-
 
 
     checkWidth();
@@ -351,8 +351,8 @@ $(function () {
                         data: [langObj.language[i].value, 100 - langObj.language[i].value],
                         backgroundColor: langObj.bgColor,
                         hoverBorderColor: langObj.bgColor
-        }
-      ],
+                    }
+                ],
                 labels: [langObj.language[i].shortName, MY_OBJECT.WORDS.LEARNING]
             },
             options: {
@@ -446,8 +446,8 @@ $(function () {
                         borderWidth: 2,
                         hoverBorderWidth: 2,
 
-}
-],
+                    }
+                ],
                 labels: [softwares[i].labelIt, MY_OBJECT.WORDS.LEARNING]
             },
             options: {
