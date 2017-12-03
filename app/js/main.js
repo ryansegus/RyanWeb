@@ -253,7 +253,8 @@ $(function () {
 
 
     // SHOW/HIDE EXPERIENCE LISTS
-    $('.buttonWrap').click(function ($expCont) {
+    // document.querySelector('.blur-image');
+    $('#experience .buttonWrap').click(function ($expCont) {
         $(this).parent().parent().next('div').slideToggle(300);
         $(this).toggleClass('active');
         $(this).addClass("state");
