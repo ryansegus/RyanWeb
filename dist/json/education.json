@@ -1,0 +1,29 @@
+{
+  "education": [
+    {
+      "title": "TSU Progettista Grafico",
+      "place": "Colegio Universitario Monseñor de Talavera, Ccs-Vzla",
+      "date": "Ago 2003 - Mag 2005"
+    },
+    {
+      "title": "Cogresso Internazionale di Grafica",
+      "place": "Coidigra, Merida-Vzla",
+      "date": "Nov 2005"
+    },
+    {
+      "title": "Metodi di Stampa Officina (Schermo)",
+      "place": "Museo de la Estampa y el Diseño Carlos Cruz Diez, Ccs-Vzla",
+      "date": "Oct 2004 - Feb 2005"
+    },
+    {
+      "title": "Corso di Inglese",
+      "place": "Open English, Ccs-Vzla",
+      "date": "Mag 2014 - Gen 2015"
+    },
+    {
+      "title": "Corso di Italiano",
+      "place": "Istituto Italiano di Cultura di Caracas, Ccs-Vzla",
+      "date": "Ago 2015 - Dec 2015"
+    }
+  ]
+}

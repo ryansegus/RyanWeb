@@ -1,0 +1,16 @@
+{
+    "aboutMeTitle": "Su di me",
+    "description": "Sono un progettista web &amp; grafico, amante della tecnologia, appassionato di semplificare le metodologie. Sto cercando un lavoro con grandi richieste che mi permette di sviluppare il mio pieno potenziale. Mi sento pronto a raggiungere il successo con una grande squadra.",
+    "typology": [
+        {
+            "type": "Disegnatore Grafico - 2005",
+            "description": "la mia specialità è il branding, la creazione della marca, con elevata conoscenza dei programmi di Adobe, specialmente Illustrator, PhotoShop e InDesign.",
+            "bgImg": "designer"
+        },
+        {
+            "type": "Sviluppatore - 2008",
+            "description": "il mio forte è il frontend, sono specializzato nel livello del stile delle pagine web, con eccellente conoscenza da HTML e CSS insieme con la mia conoscenza di backend (PHP, JQuery, Bancadati, etc) mi permettono di crescere professionalmente in un gruppo di lavoro.",
+            "bgImg": "developer"
+        }
+  ]
+}

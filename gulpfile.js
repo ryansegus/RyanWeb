@@ -77,6 +77,11 @@ gulp.task('fonts', function () {
     return gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('dist/fonts'))
 });
+
+gulp.task('json', function () {
+    return gulp.src('app/json/**/*')
+        .pipe(gulp.dest('dist/json'))
+});
 /*gulp.task('svg', function () {
     return gulp.src('app/img/')
         .pipe(gulp.dest('dist/img'))
@@ -136,7 +141,7 @@ gulp.task('minifyIndex', function () {
 });
 
 gulp.task('prod', function (callback) {
-    runSequence('clean:dist', ['sassdoc', 'useref', 'images'],
+    runSequence('clean:dist', ['json','sassdoc', 'useref', 'images'],
         callback
     )
 })

@@ -1,0 +1,46 @@
+{
+  "knowledge": [
+    {
+      "name": "WEB",
+      "class": "web",
+      "value": 8
+    },
+    {
+      "name": "STAMPE",
+      "class": "print",
+      "value": 8
+    },
+    {
+      "name": "BRANDING",
+      "class": "branding",
+      "value": 6
+    },
+    {
+      "name": "ILLUSTRAZIONE",
+      "class": "illustration",
+      "value": 4
+    },
+    {
+      "name": "LAYOUT",
+      "class": "layout",
+      "value": 4
+    }
+  ],
+  "personality": [
+    {
+      "name": "CREATIVITÀ",
+      "class": "creativity",
+      "value": 9
+    },
+    {
+      "name": "LEADERSHIP",
+      "class": "leadership",
+      "value": 8
+    },
+    {
+      "name": "ORGANIZZAZIONE",
+      "class": "organization",
+      "value": 6
+    }
+  ]
+}
