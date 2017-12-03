@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });*/
 
 var $expCont = $id('experience');
-console.log($expCont);
+
 /* ----------------------------- */
 // LOAD TEMPLATES INTO SECTIONS //
 /* ---------------------------- */
