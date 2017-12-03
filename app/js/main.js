@@ -75,7 +75,7 @@ function showOverlay(e) {
             el.removeAttribute('style');
             // CHECK USING CONSTANT CONST ON USEREF
             // const mySiema
-            var mySiema = new Siema({
+            mySiema = new Siema({
                 loop: true
             });
 
