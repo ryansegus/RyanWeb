@@ -54,7 +54,7 @@ $id = function (id) {
 // SHOW OVERLAY FUNCTION //
 /* --------------------- */
 
-function showOverlay() {
+function showOverlay(e) {
     el = document.querySelector('.overlay');
 
     el.style.opacity = "1";
@@ -68,7 +68,9 @@ function showOverlay() {
         el.style.filter = 'alpha(opacity=0)';
 
         setTimeout(function () {
-            p.remove();
+            // $(p).remove();
+            // delete p;
+            el.removeChild(p);
             el.style.visibility = 'hidden';
             el.removeAttribute('style');
             // CHECK USING CONSTANT CONST ON USEREF
@@ -76,6 +78,9 @@ function showOverlay() {
             var mySiema = new Siema({
                 loop: true
             });
+
+            // document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+            // document.querySelector('.next').addEventListener('click', () => mySiema.next());
 
         }, 100);
 
@@ -121,7 +126,7 @@ function makeLISTSkills(array, str, classes) {
         for (var k = 0; k < 10; k++) {
 
             circle = document.createElement('div');
-            liDots.append(circle);
+            liDots.appendChild(circle);
         }
 
         // Set its contents:
@@ -408,7 +413,7 @@ $(function () {
         Container.appendChild(divCol);
 
         divCol.appendChild(canvasContainer);
-        divCol.append(legendContainer);
+        divCol.appendChild(legendContainer);
         canvasContainer.appendChild(canvas);
     }
 
@@ -513,7 +518,7 @@ $(function () {
         whatiuse.appendChild(divCol);
 
         divCol.appendChild(canvasContainer);
-        divCol.append(svg);
+        divCol.appendChild(svg);
         canvasContainer.appendChild(canvas);
     }
     //    console.log(softwaresObj)
