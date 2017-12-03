@@ -868,6 +868,10 @@ footer {
       left: 0;
       right: 0;
       z-index: -1;
+      position: -webkit-sticky;
+      position: sticky;
+      height: 100vh;
+      top: 0;
       -webkit-filter: grayscale(1);
               filter: grayscale(1);
     }
