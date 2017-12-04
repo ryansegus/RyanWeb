@@ -254,10 +254,20 @@ $(function () {
 
     // SHOW/HIDE EXPERIENCE LISTS
     // document.querySelector('.blur-image');
-    $('#experience .buttonWrap').click(function ($expCont) {
+    /*$('.buttonWrap').click(function (e) {
+        console.log(this);
+        e.preventDefault();
         $(this).parent().parent().next('div').slideToggle(300);
         $(this).toggleClass('active');
         $(this).addClass("state");
+    });*/
+
+    $($expCont).on("click", '.buttonWrap', function (e) {
+        e.preventDefault();
+        $(this).parent().parent().next('div').slideToggle(300);
+        $(this).toggleClass('active');
+        $(this).addClass("state");
+
     });
 
     // CREATE GALLERY
