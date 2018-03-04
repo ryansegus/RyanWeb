@@ -475,7 +475,7 @@ template {
   transition: all 0.6s cubic-bezier(0.37, 0.1, 0.64, 0.93);
 }
 
-.flexRowNoWrap, .flexSiema, .languagesHolder, #skills ul:nth-child(even) li, #interests, footer ul.social {
+.flexRowNoWrap, .languagesHolder, #skills ul:nth-child(even) li, #interests, footer ul.social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,6 +512,16 @@ canvas {
 
 img {
   width: 100%;
+}
+
+.siema__layout .siema__arrowBtn {
+  display: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .siema__layout .siema__arrowBtn {
+    display: block;
+  }
 }
 
 /* PLUGINS */
@@ -1539,72 +1549,10 @@ s {
   opacity: 1;
 }
 
-.siema {
-  text-align: center;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
-.siema > div {
-  padding: 1em 0;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-
-.siema .title {
-  font-size: 1.11065em;
-  font-weight: 700;
-}
-
-@media (min-width: 20em) and (max-width: 60em) {
-  .siema .title {
-    font-size: calc( 1.11065em + 0.20886 * ( ( 100vw - 20em) / 40 ));
-  }
-}
-
-@media (min-width: 60em) {
-  .siema .title {
-    font-size: 1.31951em;
-  }
-}
-
-.siema .place {
-  font-size: 1.23354em;
-  font-weight: 300;
-}
-
-@media (min-width: 20em) and (max-width: 60em) {
-  .siema .place {
-    font-size: calc( 1.23354em + 0.50756 * ( ( 100vw - 20em) / 40 ));
-  }
-}
-
-@media (min-width: 60em) {
-  .siema .place {
-    font-size: 1.7411em;
-  }
-}
-
-.siema .date {
-  font-size: 1.44385em;
-  font-weight: 100;
-  color: #8dc63f;
-}
-
-@media (min-width: 20em) and (max-width: 60em) {
-  .siema .date {
-    font-size: calc( 1.44385em + 1.19517 * ( ( 100vw - 20em) / 40 ));
-  }
-}
-
-@media (min-width: 60em) {
-  .siema .date {
-    font-size: 2.63902em;
-  }
-}
-
-.flexSiema {
+.siema__layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1613,17 +1561,128 @@ s {
           justify-content: space-between;
 }
 
-.flexSiema .btn {
+.siema__layout .siema__arrowBtn {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
 
-.flexSiema .main {
+.siema__layout .siema__mainContent {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   overflow: hidden;
+  padding: 1em;
+}
+
+.siema__layout .siema__mainContent #education {
+  text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.siema__layout .siema__mainContent #education > div > div {
+  padding: 1em 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.siema__layout .siema__mainContent #education ul.siema__navDots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  clear: both;
+}
+
+.siema__layout .siema__mainContent #education ul.siema__navDots li {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.siema__layout .siema__mainContent #education ul.siema__navDots li:last-child {
+  margin-right: 0;
+}
+
+.siema__layout .siema__mainContent #education ul.siema__navDots li.isActive circle {
+  opacity: 1;
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset 0.3s, opacity 0.15s;
+  transition: stroke-dashoffset 0.3s, opacity 0.15s;
+}
+
+.siema__layout .siema__mainContent #education ul.siema__navDots svg {
+  z-index: 10;
+}
+
+.siema__layout .siema__mainContent #education ul.siema__navDots svg circle {
+  opacity: 1;
+  fill: #EEE;
+  stroke: #8dc63f;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 39 39;
+  stroke-dashoffset: 39;
+  -webkit-transition: stroke-dashoffset 0.3s, opacity 0.3s;
+  transition: stroke-dashoffset 0.3s, opacity 0.3s;
+}
+
+.siema__title {
+  font-size: 1.11065em;
+  font-weight: 700;
+}
+
+@media (min-width: 20em) and (max-width: 60em) {
+  .siema__title {
+    font-size: calc( 1.11065em + 0.20886 * ( ( 100vw - 20em) / 40 ));
+  }
+}
+
+@media (min-width: 60em) {
+  .siema__title {
+    font-size: 1.31951em;
+  }
+}
+
+.siema__place {
+  font-size: 1.23354em;
+  font-weight: 300;
+}
+
+@media (min-width: 20em) and (max-width: 60em) {
+  .siema__place {
+    font-size: calc( 1.23354em + 0.50756 * ( ( 100vw - 20em) / 40 ));
+  }
+}
+
+@media (min-width: 60em) {
+  .siema__place {
+    font-size: 1.7411em;
+  }
+}
+
+.siema__date {
+  font-size: 1.44385em;
+  font-weight: 100;
+  color: #8dc63f;
+}
+
+@media (min-width: 20em) and (max-width: 60em) {
+  .siema__date {
+    font-size: calc( 1.44385em + 1.19517 * ( ( 100vw - 20em) / 40 ));
+  }
+}
+
+@media (min-width: 60em) {
+  .siema__date {
+    font-size: 2.63902em;
+  }
 }
 
 .ityped-cursor {
@@ -1825,6 +1884,49 @@ s {
 .buttonWrap.active span.left {
   -webkit-animation: animateLeft 1.2s linear;
           animation: animateLeft 1.2s linear;
+}
+
+/* CHEVRON BUTTON */
+button.chevron {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+button.chevron:hover::before {
+  border-color: #8dc63f;
+}
+
+.chevron::before {
+  border-style: solid;
+  border-width: 0.05em 0.05em 0 0;
+  content: '';
+  display: inline-block;
+  height: 2.45em;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 2.45em;
+  -webkit-transition: border 0.3s cubic-bezier(0.37, 0.1, 0.64, 0.93);
+  transition: border 0.3s cubic-bezier(0.37, 0.1, 0.64, 0.93);
+}
+
+.chevron.next:before {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.chevron.prev:before {
+  left: 0.25em;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 @-webkit-keyframes animateLeft {
