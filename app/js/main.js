@@ -18,11 +18,11 @@ var skills = [
     ['WEB', 'STAMPE', 'BRANDING', 'ILLUSTRAZIONE', 'LAYOUT'],
     ['CREATIVITÀ', 'LEADERSHIP', 'ORGANIZZAZIONE']
 
-]
+];
 var skillclasses = [
     ['web', 'print', 'branding', 'illustration', 'layout'],
     ['creativity', 'leadership', 'organization']
-]
+];
 
 var langObj = {
     bgColor: ["#8dc63f", "#1d1d1d"],
@@ -68,20 +68,9 @@ function showOverlay(e) {
         el.style.filter = 'alpha(opacity=0)';
 
         setTimeout(function () {
-            // $(p).remove();
-            // delete p;
             el.removeChild(p);
             el.style.visibility = 'hidden';
             el.removeAttribute('style');
-            // CHECK USING CONSTANT CONST ON USEREF
-            // const mySiema
-            mySiema = new Siema({
-                loop: true
-            });
-
-            // document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-            // document.querySelector('.next').addEventListener('click', () => mySiema.next());
-
         }, 100);
 
     }, 2400);
@@ -624,7 +613,7 @@ $(function () {
     var infoDiv = $id("infographics");
     var footer = $('footer');
 
-    btn = document.querySelector("header .btn");
+    btn = document.querySelector("header #togglePage");
     addEvent(btn, "click", function () {
 
         $(page, infoBtn, infoDiv, footer).removeAttr('style');
@@ -634,10 +623,14 @@ $(function () {
                 removeClass(infoDiv, "IsActive");
                 addClass(grid, "IsActive");
                 btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><title>Off</title><path d="M42 12H18C8.1 12 0 20.1 0 30s8.1 18 18 18h24c9.9 0 18-8.1 18-18S51.9 12 42 12zM18 38c0 0.6-0.4 1-1 1s-1-0.4-1-1V22c0-0.6 0.4-1 1-1s1 0.4 1 1V38zM42 43c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13S49.2 43 42 43z" /></svg>';
+                // LOAD SIEMA EDUCATION
+                SIEMA.loadSiemaSlider(SIEMA.holder);
             } else {
+                // console.log('destroying');
+                SIEMA.destroySiema();
+                SIEMA.mySiema=null;
                 removeClass(infoDiv, "IsActive");
                 removeClass(grid, "IsActive");
-                //                $(page, infoBtn, infoDiv, footer).removeAttr('style');
                 btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><title>On</title><path d="M42 12H18C8.1 12 0 20.1 0 30s8.1 18 18 18h24c9.9 0 18-8.1 18-18S51.9 12 42 12zM18 43c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13S25.2 43 18 43zM49.7 26.7l-8 8C41.5 34.9 41.3 35 41 35s-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1 0-1.4s1-0.4 1.4 0L41 32.6l7.3-7.3c0.4-0.4 1-0.4 1.4 0S50.1 26.3 49.7 26.7z" /></svg>';
             }
 
@@ -689,11 +682,11 @@ $(function () {
 
             if (window.matchMedia("(max-width: 1024px)").matches && hasClass(infoDiv, "IsActive")) {
 
-                console.log(' + 1024px onresize');
+                // console.log(' + 1024px onresize');
                 $(page, footer).css('display', 'block');
                 removeClass(infoDiv, "IsActive");
             } else {
-                console.log(' - 1024px onresize');
+                // console.log(' - 1024px onresize');
 
             }
         });
@@ -701,11 +694,11 @@ $(function () {
         window.addEventListener('resize', function () {
             if (window.matchMedia("(max-width: 1024px)").matches && hasClass(infoDiv, "IsActive")) {
 
-                console.log(' + 1024px resize');
+                // console.log(' + 1024px resize');
                 $(page, footer).css('display', 'block');
                 removeClass(infoDiv, "IsActive");
             } else {
-                console.log(' - 1024px resize');
+                // console.log(' - 1024px resize');
 
             }
         }, true);

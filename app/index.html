@@ -15,6 +15,15 @@
     <!-- build:css css/style.css -->
     <link rel="stylesheet" href="css/style.css">
     <!--endbuild-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114765023-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-114765023-1');
+    </script>
 </head>
 <body>
 <div class="overlay"></div>
@@ -47,7 +56,7 @@
                     <div><span class="ityped" id="sono"></span>.</div>
                 </div>
                 <div>
-                    <div class="btn">
+                    <div class="btn" id="togglePage">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
                             <title>On</title>
                             <path d="M42 12H18C8.1 12 0 20.1 0 30s8.1 18 18 18h24c9.9 0 18-8.1 18-18S51.9 12 42 12zM18 43c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13S25.2 43 18 43zM49.7 26.7l-8 8C41.5 34.9 41.3 35 41 35s-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1 0-1.4s1-0.4 1.4 0L41 32.6l7.3-7.3c0.4-0.4 1-0.4 1.4 0S50.1 26.3 49.7 26.7z"></path>
@@ -66,19 +75,16 @@
         </section>
         <!-- EDUCATION (SIEMA SLIDER) -->
         <section class="boxPadding">
-            <h1>Percorso Formativo</h1>
-            <div class="flexSiema">
-                <div class="btn">
-                    <!--<button class="prev">prev</button>-->
-                </div>
-                <div class="main">
+            <h2>Percorso Formativo</h2>
+            <div class="siema__layout">
+                <button class="siema__arrowBtn chevron prev" id="prevEducation"></button>
+                <div class="siema__mainContent">
                     <!-- HERE GOES THE TEMPLATE -->
                     <div id="education" class="siema">
                     </div>
+                    <!--<ul id="siemaNav"></ul>-->
                 </div>
-                <div class="btn">
-                    <!--<button class="next">next</button>-->
-                </div>
+                <button class="siema__arrowBtn chevron next" id="nextEducation"></button>
             </div>
         </section>
         <section class="squish">
@@ -165,9 +171,9 @@
 <script id="educationTmpl" type="text/template">
     {{#education}}
     <div>
-        <div class="title">{{title}}</div>
-        <div class="place">{{place}}</div>
-        <div class="date">{{date}}</div>
+        <div class="siema__title">{{title}}</div>
+        <div class="siema__place">{{place}}</div>
+        <div class="siema__date">{{date}}</div>
     </div>
     {{/education}}
 </script>
@@ -238,6 +244,7 @@
 <script src="js/main.js"></script>
 <!-- endbuild -->
 
+<script src="js/educationCarousel.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
 <script src="https://pawelgrzybek.com/siema/assets/siema.min.js"></script>
 </body>

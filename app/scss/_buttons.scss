@@ -101,6 +101,42 @@
     }
 }
 
+/* CHEVRON BUTTON */
+button.chevron{
+    background:transparent;
+    border:0;
+    outline:none;
+    cursor:pointer;
+    &:hover::before{
+        border-color: $primaryColor;
+    }
+}
+.chevron::before {
+    border-style: solid;
+    border-width: 0.05em 0.05em 0 0;
+    content: '';
+    display: inline-block;
+    height: 2.45em;
+    transform: rotate(-45deg);
+    width: 2.45em;
+    transition:border 0.3s cubic-bezier(.37, .1, .64, .93);
+}
+
+.chevron.next:before {
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.chevron.prev:before {
+    left: 0.25em;
+    transform: rotate(-135deg);
+}
+
 @keyframes animateLeft {
     0% {
         opacity: 1;

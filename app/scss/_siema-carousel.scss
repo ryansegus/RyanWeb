@@ -1,35 +1,79 @@
-.siema {
-    text-align: center;
-    transform: translate3d(0, 0, 0);
-    -webkit-font-smoothing: subpixel-antialiased;
-    > div {
-        padding: $pad 0;
-        transform: translate3d(0, 0, 0);
-    }
-    .title {
-        @include ms-respond(font-size, 2);
-        font-weight: 700;
-    }
-    .place {
-        @include ms-respond(font-size, 4);
-        font-weight: 300;
-    }
-    .date {
-        @include ms-respond(font-size, 7);
-        font-weight: 100;
-        color: $primaryColor;
-    }
-}
+.siema{
+  $self:&;
+  &__layout{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
 
-.flexSiema {
-    @extend .flexRowNoWrap;
-    align-items: center;
-    justify-content: space-between;
-    .btn {
-        flex: 0 0 auto;
-    }
-    .main {
-        flex: 1 1 auto;
-        overflow: hidden;
-    }
+	#{ $self }__arrowBtn{
+	  flex:0 0 auto;
+	  @extend %hidden-mobile;
+	}
+	#{ $self }__mainContent{
+	  flex:1 1 auto;
+	  overflow:hidden;
+	  padding:$pad;
+	  #education{
+		text-align:center;
+		transform:translate3d(0, 0, 0);
+		-webkit-font-smoothing:subpixel-antialiased;
+		> div > div{
+		  padding:$pad 0;
+		  transform:translate3d(0, 0, 0);
+		}
+		ul#{ $self }__navDots{
+		  display:flex;
+		  justify-content:center;
+		  clear:both;
+		  li{
+			width:18px;
+			height:18px;
+			margin-right:4px;
+			cursor:pointer;
+			&:last-child{
+			  margin-right:0;
+			}
+
+			&.isActive{
+			  circle{
+				opacity:1;
+				stroke-dashoffset:0;
+				transition:stroke-dashoffset 0.3s, opacity 0.15s;
+			  }
+			}
+		  }
+		  svg{
+			z-index:10;
+
+			circle{
+			  opacity:1;
+			  fill:#EEE;
+			  stroke:$primaryColor;
+			  stroke-width:2;
+			  stroke-linecap:round;
+			  stroke-linejoin:round;
+			  stroke-dasharray:39 39;
+			  stroke-dashoffset:39;
+			  transition:stroke-dashoffset 0.3s, opacity 0.3s;
+			}
+		  }
+		}
+	  }
+	}
+  }
+  &__title{
+	@include ms-respond(font-size, 2);
+	font-weight:700;
+  }
+
+  &__place{
+	@include ms-respond(font-size, 4);
+	font-weight:300;
+  }
+
+  &__date{
+	@include ms-respond(font-size, 7);
+	font-weight:100;
+	color:$primaryColor;
+  }
 }
