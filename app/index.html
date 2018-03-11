@@ -90,8 +90,8 @@
         <section class="squish">
             <h2>Esperienza</h2>
             <!-- HERE GOES THE TEMPLATE -->
-            <div id="experience" class="accordion">
-            </div>
+            <dl id="experience" class="accordion experience">
+            </dl>
         </section>
         <section class="gallerySection">
             <div class="boxPadding">
@@ -179,21 +179,25 @@
 </script>
 <script id="expTmpl" type="text/template">
     {{#experience}}
-    <h3>{{company}}<span><div class="buttonWrap"><div class="inner right"><span class="left"></span><span
+    <dt class="experience__company">{{company}}<span><div class="buttonWrap"><div class="inner right"><span class="left"></span><span
             class="right"></span></div>
             <div class="inner left"><span class="left"></span><span class="right"></span></div>
             </div>
             </span>
-    </h3>
-    <div>
-        <div class="position">{{{position}}}<span>{{address}} ({{date}})</span></div>
-        <div class="occupazione">Occupazioni e Responsabilità</div>
+    </dt>
+    <dd class="experience__definition">
+        <hgroup>
+            <h3 class="experience__position">{{{position}}}</h3>
+            <h4 class="experience__date">{{address}} ({{date}})</h4>
+            <h5 class="experience__responsability">{{responsability}}</h5>
+        </hgroup>
+
         <ul>
             {{#tasks}}
             <li>{{.}}</li>
             {{/tasks}}
         </ul>
-    </div>
+    </dd>
     {{/experience}}
 </script>
 <script id="interestsLikesTmpl" type="text/template">

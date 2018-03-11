@@ -253,7 +253,16 @@ $(function () {
 
     $($expCont).on("click", '.buttonWrap', function (e) {
         e.preventDefault();
-        $(this).parent().parent().next('div').slideToggle(300);
+        $parent = $(this).parent().parent();
+        $currentDefinition = $parent.next('.experience__definition');
+        $parent.siblings('.experience__company').removeClass("isNext");
+        $currentDefinition.slideToggle(300).toggleClass("isOpen");
+
+        if ($currentDefinition.hasClass("isOpen")) {
+
+            $parent.nextAll('.experience__company').eq(0).addClass("isNext");
+        }
+
         $(this).toggleClass('active');
         $(this).addClass("state");
 

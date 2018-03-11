@@ -470,7 +470,7 @@ template {
 
 .overlay, header, header .headerContainer, header .flexWrap, #page, #btnInfographics, #infographics, footer, section, .grid, .grid.IsActive, .grid.IsActive #page,
 .grid.IsActive #infographics,
-.grid.IsActive footer, .accordion > h3, #btnInfographics svg, .gallery > div, .gallery .projectDesc, .gallery figure, .gallery figure figcaption .openModal > div {
+.grid.IsActive footer, .experience .experience__company, #btnInfographics svg, .gallery > div, .gallery .projectDesc, .gallery figure, .gallery figure figcaption .openModal > div {
   -webkit-transition: all 0.6s cubic-bezier(0.37, 0.1, 0.64, 0.93);
   transition: all 0.6s cubic-bezier(0.37, 0.1, 0.64, 0.93);
 }
@@ -1104,27 +1104,62 @@ h2 {
   }
 }
 
-h3 {
+h3, .experience .experience__company {
   font-size: 1.17049em;
   line-height: 1;
 }
 
 @media (min-width: 20em) and (max-width: 60em) {
-  h3 {
+  h3, .experience .experience__company {
     font-size: calc( 1.17049em + 0.34523 * ( ( 100vw - 20em) / 40 ));
   }
 }
 
 @media (min-width: 60em) {
-  h3 {
+  h3, .experience .experience__company {
     font-size: 1.51572em;
+  }
+}
+
+h4 {
+  font-size: 1.11065em;
+  line-height: 1;
+}
+
+@media (min-width: 20em) and (max-width: 60em) {
+  h4 {
+    font-size: calc( 1.11065em + 0.20886 * ( ( 100vw - 20em) / 40 ));
+  }
+}
+
+@media (min-width: 60em) {
+  h4 {
+    font-size: 1.31951em;
+  }
+}
+
+h5 {
+  font-size: 1.08189em;
+  line-height: 1;
+}
+
+@media (min-width: 20em) and (max-width: 60em) {
+  h5 {
+    font-size: calc( 1.08189em + 0.14925 * ( ( 100vw - 20em) / 40 ));
+  }
+}
+
+@media (min-width: 60em) {
+  h5 {
+    font-size: 1.23114em;
   }
 }
 
 .hero,
 h1,
 h2,
-h3 {
+h3,
+.experience .experience__company {
   font-weight: 400;
   text-align: center;
 }
@@ -1132,7 +1167,7 @@ h3 {
 .hero span,
 h1 span,
 h2 span,
-h3 span {
+h3 span, .experience .experience__company span {
   color: #8dc63f;
   font-weight: 100;
   text-transform: capitalize;
@@ -1705,7 +1740,7 @@ s {
   }
 }
 
-.accordion > h3 {
+.experience .experience__company {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1721,66 +1756,55 @@ s {
           transition-delay: 200ms;
 }
 
-.accordion > h3 span {
+.experience .experience__company span {
   -ms-flex-item-align: center;
       align-self: center;
 }
 
-.accordion > h3.active {
-  border-bottom: 0px transparent;
+.experience .experience__company.isNext {
+  border-top: 1px solid #8dc63f;
 }
 
-.accordion > div {
+.experience > dd, .experience .experience__definition {
   position: relative;
   display: none;
   padding: 0.5em 0;
 }
 
-.accordion > div:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  background: #8dc63f;
-  opacity: 0.8;
+.experience > dd h3, .experience > dd .experience__company, .experience > dd h4, .experience > dd h5, .experience .experience__definition h3, .experience .experience__definition .experience__company, .experience .experience__definition h4, .experience .experience__definition h5 {
+  text-align: left;
+  font-weight: 400;
+  color: dimgray;
 }
 
-.accordion ul {
+.experience > dd .experience__position, .experience .experience__definition .experience__position {
+  margin: 0.5em 0 0.25em 0;
+}
+
+.experience > dd .experience__date, .experience .experience__definition .experience__date {
+  margin: 0;
+  color: #8dc63f;
+}
+
+.experience > dd .experience__responsability, .experience .experience__definition .experience__responsability {
+  margin: 1em 0;
+}
+
+.experience ul {
   list-style: none;
   text-indent: 1em;
   margin: 0;
   padding: 0;
 }
 
-.accordion ul li {
+.experience ul li {
   margin: 0;
   padding: 0 0 0.33333em 0;
 }
 
-.accordion ul li:before {
+.experience ul li:before {
   content: "• ";
   color: #8dc63f;
-}
-
-.position {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  color: gray;
-}
-
-.position span {
-  color: #8dc63f;
-}
-
-.occupazione {
-  text-align: left;
 }
 
 .btn svg {

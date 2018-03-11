@@ -35,6 +35,14 @@ h3 {
     @include ms-respond(font-size, 3);
     line-height: 1;
 }
+h4 {
+    @include ms-respond(font-size, 2);
+    line-height: 1;
+}
+h5 {
+    @include ms-respond(font-size, 1.5);
+    line-height: 1;
+}
 
 .hero,
 h1,

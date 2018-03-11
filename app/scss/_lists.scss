@@ -1,61 +1,56 @@
-.accordion {
-    > h3 {
-        display: flex;
-        justify-content: space-between;
-        text-transform: capitalize;
-        color: dimgray;
-        border-bottom: 1px solid $primaryColor;
-        padding: $pad/2;
-        margin: 0;
-        @extend %transition;
-        transition-delay: 200ms;
-        span {
-            align-self: center;
-        }
-        &.active {
-            border-bottom: 0px transparent;
-        }
-    }
-    >div {
-        position: relative;
-        display: none;
-        padding: ($pad/2) 0;
-        &:after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 1px;
-            width: 100%;
-            background: $primaryColor;
-            opacity: 0.8;
-        }
-    }
-    ul {
-        list-style: none;
-        text-indent: $pad;
-        margin: 0;
-        padding: 0;
-        li {
-            margin: 0;
-            padding: 0 0 ($pad/3) 0;
-            &:before {
-                content: "• ";
-                color: $primaryColor;
-            }
-        }
-    }
-}
+.experience{
+  $self:&;
+  #{ $self }__company{
+	@extend h3;
+	display:flex;
+	justify-content:space-between;
+	text-transform:capitalize;
+	color:dimgray;
+	border-bottom:1px solid $primaryColor;
+	padding:$pad/2;
+	margin:0;
+	@extend %transition;
+	transition-delay:200ms;
+	span{
+	  align-self:center;
+	}
+	&.isNext{
+	  border-top:1px solid #8dc63f;
+	}
+  }
 
-.position {
-    display: flex;
-    flex-direction: column;
-    color: gray;
-    span {
-        color: $primaryColor;
-    }
-}
-
-.occupazione {
-    text-align: left;
+  > dd, #{ $self }__definition{
+	position:relative;
+	display:none;
+	padding:$pad/2 0;
+	h3, h4, h5{
+	  text-align:left;
+	  font-weight:400;
+	  color:dimgray;
+	}
+	#{ $self }__position{
+	  margin:$pad/2 0 $pad/4 0;
+	}
+	#{ $self }__date{
+	  margin:0;
+	  color:$primaryColor;
+	}
+	#{ $self }__responsability{
+	  margin:$pad 0;
+	}
+  }
+  ul{
+	list-style:none;
+	text-indent:$pad;
+	margin:0;
+	padding:0;
+	li{
+	  margin:0;
+	  padding:0 0 ($pad/3) 0;
+	  &:before{
+		content:"• ";
+		color:$primaryColor;
+	  }
+	}
+  }
 }
