@@ -1,21 +1,44 @@
 {
     "experience": [
         {
+            "company": "Ulixe Technologies @Reply.",
+            "position": "Sviluppatore Front End",
+            "address": "Milan-It",
+            "date": "OCT 2017 - Oggi",
+            "tasks": [
+                "Sviluppo frontend per la integrazione di nuove funzione ai siti della azienda SPAR.",
+                "Collaborazione nel miglioramento di codici frontend ai siti della azienda SPAR.",
+                "Diversi correzioni degli errori (Bugs) per migliorare il funzionamento dei siti della azienda SPAR."
+            ]
+        },
+        {
             "company": "Grupo MenosesMas, C.A.",
             "position": "Disegnatore Grafico &amp; Sviluppatore Web Senior",
             "address": "Caracas-Vzla",
             "date": "MAG 2006 - LUG 2017",
             "tasks": [
-            "Sviluppare strategie per pubblicizzare il marchio di diversi clienti.", "Controllo delle uscite dell’opera finale per la stampa.", "Disegno del logo per diversi clienti.", "Realizzazione del materiale “reale” prodotto per le campagne pubblicitarie (es. Flyers, brochure, out-of- home, etc.), in maniera coerente & coordinata con la strategia adottata di ogni cliente.", "Mappe e infografiche di progettazione per le presentazione digitali di ogni cliente.", "Analisi e sviluppo del sito web della società e dei suoi vari clienti con tecnologia HTML5 e CSS3, in alcuni casi è stato implementato utilizzando la bancadati per visualizzare i prodotti o contenuti offerti da ogni marca.", "Sviluppo del sito web dinamico con galleria fotografica per presentare i progetti e il lavoro intrapresi dal cliente “www.dimo.com.ve” creato con la tecnologia Adobe Flash, usando un linguaggio AS3.", "Sviluppo di siti Web (pagina di destinazione www.morettservicesac.com) per il cliente “Morett Services AC”, il frontend è stato sviluppato utilizzando HTML5 e CSS3 lingua, allo stesso modo, ha generato tutto il codice CSS attraverso preprocessore SASS.", "Animazione banner di scorrimento e principale sono stati sviluppati con JQuery. Contattare la mappa è stata generata con l’applicazione di Google Maps API V3.", "Sviluppo di siti web con interfaccia utente www.tuenlaceinmobiliarion.com L’interfaccia è stata sviluppata con HTML5 e CSS3 lingue, applicando la pre-elaborazione dei CSS con SASS e con l’aiuto di un quadro SUSY. Il backend è stato sviluppato con PHP, JSON e la lingua PostGIS. Le banche dati sono protetti in MySQL.", "Sviluppo di siti Web (pagina di destinazione www.ergoglobal.com) per il cliente “Suministros ErgoGlobal, C.A.”, il frontend è stato sviluppato utilizzando HTML5 e CSS3 lingua, allo stesso modo, ha generato tutto il codice CSS attraverso preprocessore SASS"
-        ]
-    },
+                "Sviluppare strategie per pubblicizzare il marchio di diversi clienti.",
+                "Controllo delle uscite dell’opera finale per la stampa.",
+                "Disegno del logo per diversi clienti.",
+                "Realizzazione del materiale “reale” prodotto per le campagne pubblicitarie (es. Flyers, brochure, out-of- home, etc.), in maniera coerente & coordinata con la strategia adottata di ogni cliente.",
+                "Mappe e infografiche di progettazione per le presentazione digitali di ogni cliente.",
+                "Analisi e sviluppo del sito web della società e dei suoi vari clienti con tecnologia HTML5 e CSS3, in alcuni casi è stato implementato utilizzando la bancadati per visualizzare i prodotti o contenuti offerti da ogni marca.",
+                "Sviluppo del sito web dinamico con galleria fotografica per presentare i progetti e il lavoro intrapresi dal cliente “www.dimo.com.ve” creato con la tecnologia Adobe Flash, usando un linguaggio AS3.", "Sviluppo di siti Web (pagina di destinazione www.morettservicesac.com) per il cliente “Morett Services AC”, il frontend è stato sviluppato utilizzando HTML5 e CSS3 lingua, allo stesso modo, ha generato tutto il codice CSS attraverso preprocessore SASS.",
+                "Animazione banner di scorrimento e principale sono stati sviluppati con JQuery. Contattare la mappa è stata generata con l’applicazione di Google Maps API V3.", "Sviluppo di siti web con interfaccia utente www.tuenlaceinmobiliarion.com L’interfaccia è stata sviluppata con HTML5 e CSS3 lingue, applicando la pre-elaborazione dei CSS con SASS e con l’aiuto di un quadro SUSY. Il backend è stato sviluppato con PHP, JSON e la lingua PostGIS. Le banche dati sono protetti in MySQL.", "Sviluppo di siti Web (pagina di destinazione www.ergoglobal.com) per il cliente “Suministros ErgoGlobal, C.A.”, il frontend è stato sviluppato utilizzando HTML5 e CSS3 lingua, allo stesso modo, ha generato tutto il codice CSS attraverso preprocessore SASS"
+            ]
+        },
         {
             "company": "PDVSA, S.A.",
             "position": "Disegnatore Grafico &amp; Sviluppatore Web Senior",
             "address": "Caracas-Vzla",
             "date": "FEB 2012 - FEB 2015",
             "tasks": [
-            "Logodesign DEDT.", "Disegno, diagrammi e montaggio del libro “Faja Petrolífera del Orinoco”.", "Mappe e infografiche di progettazione per le presentazioni digitali.", "Indicazioni per la stampa 3D della “Faja Petrolífera del Orinoco”.", "Analisi e Sviluppo, Implementazione e Revisione riguardanti l’aggiornamento e la manutenzione di applicativi client / server (back & front-end) utilizzati nella intranet aziendale del settore petrolifero. Sviluppo FrontEnd è stata applicata HTML, CSS e il framework Bootstrap, mentre lo sviluppo della tecnologia di back-end è stato utilizzato PHP, JQuery, PostgreSQL e PostGIS.", "Organizzazione e migliorare la banca dati del territorio nazionale del Venezuela. Per l’organizzazione dei dati è stato proposto uno schema di tabelle pivot PostgreSQL che vengono aggiornati attraverso ArcGIS.", "Applicazione web per visualizzare i progressi in tempo reale della “Mision Vivienda Venezuela”. Il progetto è stato realizzato sulla Intranet aziendale, ha il supporto adattabile a diverse dimensioni di monitor, così come il supporto di Mozilla, Safari Chrome. L’interfaccia è stata sviluppata con SUSY, HTML5 e CSS3, utilizzando il preprocessore SASS per generare il CSS. Il backend è stato sviluppato con PHP, jQuery e la lingua PostGIS, mentre i dati geografici si basa sull’utilizzo di Google Maps API V3 applicazione, i dati registrati vengono continuava a database PostgreSQL."
+            "Logodesign DEDT.",
+                "Disegno, diagrammi e montaggio del libro “Faja Petrolífera del Orinoco”.",
+                "Mappe e infografiche di progettazione per le presentazioni digitali.",
+                "Indicazioni per la stampa 3D della “Faja Petrolífera del Orinoco”.",
+                "Analisi e Sviluppo, Implementazione e Revisione riguardanti l’aggiornamento e la manutenzione di applicativi client / server (back & front-end) utilizzati nella intranet aziendale del settore petrolifero. Sviluppo FrontEnd è stata applicata HTML, CSS e il framework Bootstrap, mentre lo sviluppo della tecnologia di back-end è stato utilizzato PHP, JQuery, PostgreSQL e PostGIS.",
+                "Organizzazione e migliorare la banca dati del territorio nazionale del Venezuela. Per l’organizzazione dei dati è stato proposto uno schema di tabelle pivot PostgreSQL che vengono aggiornati attraverso ArcGIS.", "Applicazione web per visualizzare i progressi in tempo reale della “Mision Vivienda Venezuela”. Il progetto è stato realizzato sulla Intranet aziendale, ha il supporto adattabile a diverse dimensioni di monitor, così come il supporto di Mozilla, Safari Chrome. L’interfaccia è stata sviluppata con SUSY, HTML5 e CSS3, utilizzando il preprocessore SASS per generare il CSS. Il backend è stato sviluppato con PHP, jQuery e la lingua PostGIS, mentre i dati geografici si basa sull’utilizzo di Google Maps API V3 applicazione, i dati registrati vengono continuava a database PostgreSQL."
         ]
     },
         {
@@ -24,7 +47,9 @@
             "address": "Caracas-Vzla",
             "date": "OTT 2011 - FEB 2012",
             "tasks": [
-            "Controllo delle uscite dell’opera finale per la stampa.", "Disegno del logo per diversi clienti.", "Realizzazione del materiale “reale” prodotto per le campagne pubblicitarie (es. Flyers, brochure, out-of- home, etc.), in maniera coerente & coordinata con la strategia adottata sul web dall’azienda.", "Revisione e Restyling del nuovo sito ( www.nucorpa.com.ve ) attraverso lo sviluppo di codice responsive HTML/CSS personalizzato relativo alla gestione di un WEB statico, e creazione di Landing Page."
+            "Controllo delle uscite dell’opera finale per la stampa.",
+                "Disegno del logo per diversi clienti.",
+                "Realizzazione del materiale “reale” prodotto per le campagne pubblicitarie (es. Flyers, brochure, out-of- home, etc.), in maniera coerente & coordinata con la strategia adottata sul web dall’azienda.", "Revisione e Restyling del nuovo sito ( www.nucorpa.com.ve ) attraverso lo sviluppo di codice responsive HTML/CSS personalizzato relativo alla gestione di un WEB statico, e creazione di Landing Page."
         ]
     },
         {
@@ -33,7 +58,9 @@
             "address": "Caracas-Vzla",
             "date": "MAG 2005 - NOV 2005",
             "tasks": [
-            "Controllo delle uscite dell&opera finale per la stampa.", "Diagrammi rivista LVBP (Venezuela Professionista Baseball League).", "Montaggio delle immagini pubblicitarie nel calendario di baseball."
+            "Controllo delle uscite dell&opera finale per la stampa.",
+                "Diagrammi rivista LVBP (Venezuela Professionista Baseball League).",
+                "Montaggio delle immagini pubblicitarie nel calendario di baseball."
         ]
     }
   ]
