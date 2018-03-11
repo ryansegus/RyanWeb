@@ -88,14 +88,14 @@
             </div>
         </section>
         <section class="squish">
-            <h1>Esperienza</h1>
+            <h2>Esperienza</h2>
             <!-- HERE GOES THE TEMPLATE -->
             <div id="experience" class="accordion">
             </div>
         </section>
         <section class="gallerySection">
             <div class="boxPadding">
-                <h1>Portafoglio</h1>
+                <h2>Portafoglio</h2>
             </div>
             <div id="gallery" class="gallery">
             </div>
@@ -114,13 +114,13 @@
     <div id="infographicsCover"></div>
     <div id="infographics">
         <section class="infographics">
-            <h1>Lingue</h1>
+            <h2>Lingue</h2>
             <div id="languages" class="languagesHolder">
             </div>
-            <h1>Competenze</h1>
+            <h2>Competenze</h2>
             <div id="skills">
             </div>
-            <h1>Interesse</h1>
+            <h2>Interesse</h2>
             <div id="interests">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 160"><title>Asset 3</title>
@@ -150,7 +150,7 @@
                     </svg>
                 </div>
             </div>
-            <h1>Quale Uso</h1>
+            <h2>Quale Uso</h2>
             <div id="whatiuse">
             </div>
         </section>
@@ -163,7 +163,7 @@
     {{#typology}}
     <div class="lazyload blur-up" data-sizes="auto" data-bgset="img/bg/{{bgImg}}.jpg 200w, img/bg/{{bgImg}}.jpg 400w"
          data-sizes="auto" style="object-fit: cover;">
-        <h2>Tipologia, {{type}}</h2>
+        <h3>Tipologia, {{type}}</h3>
         <p>{{{description}}}</p>
     </div>
     {{/typology}}
@@ -179,12 +179,12 @@
 </script>
 <script id="expTmpl" type="text/template">
     {{#experience}}
-    <h2>{{company}}<span><div class="buttonWrap"><div class="inner right"><span class="left"></span><span
+    <h3>{{company}}<span><div class="buttonWrap"><div class="inner right"><span class="left"></span><span
             class="right"></span></div>
             <div class="inner left"><span class="left"></span><span class="right"></span></div>
             </div>
             </span>
-    </h2>
+    </h3>
     <div>
         <div class="position">{{{position}}}<span>{{address}} ({{date}})</span></div>
         <div class="occupazione">Occupazioni e Responsabilità</div>
@@ -215,7 +215,7 @@
     </ul>
 </script>
 <script id="footerTmpl" type="text/template">
-    <h1>{{{footerTitle}}}</h1>
+    <h2>{{{footerTitle}}}</h2>
     {{#bug}}{{/bug}}
     <ul id="socials" class="social">
         {{#footer}}

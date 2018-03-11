@@ -187,7 +187,7 @@ var $expCont = $id('experience');
 /* ABOUT */
 $.getJSON('json/about.json', function (data) {
 
-    $('#aboutMe').html(Mustache.render("<h1>{{{aboutMeTitle}}}</h1><p>{{{description}}}</p>", data));
+    $('#aboutMe').html(Mustache.render("<h2>{{{aboutMeTitle}}}</h2><p>{{{description}}}</p>", data));
 
     typeTemplate = $('#aboutMeTypologyTmpl').html();
     typology = Mustache.to_html(typeTemplate, data);
@@ -301,7 +301,7 @@ $(function () {
         item = $(this).parent().parent().parent();
 
         item.addClass('active');
-        item.after("<div class='projectDesc'><h1>" + portafoglio[id][2] + "</h1><p>" + portafoglio[id][3] + "</p></div>");
+        item.after("<div class='projectDesc'><h3>" + portafoglio[id][2] + "</h3><p>" + portafoglio[id][3] + "</p></div>");
 
         setTimeout(function () {
 

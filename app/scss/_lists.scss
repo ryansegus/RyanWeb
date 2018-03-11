@@ -1,5 +1,5 @@
 .accordion {
-    h2 {
+    > h3 {
         display: flex;
         justify-content: space-between;
         text-transform: capitalize;
@@ -57,6 +57,5 @@
 }
 
 .occupazione {
-    @extend h3;
     text-align: left;
 }
