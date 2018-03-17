@@ -5,7 +5,7 @@
 /* ABOUT */
 $.getJSON('json/about.json', function (data) {
 
-    $('#aboutMe').html(Mustache.render("<h2>{{{aboutMeTitle}}}</h2><p>{{{description}}}</p>", data));
+    $('#aboutMe').html(Mustache.render("<h1>{{{title}}}</h1><h2>{{{aboutMeTitle}}}</h2><p>{{{description}}}</p>", data));
 
     typeTemplate = $('#aboutMeTypologyTmpl').html();
     typology = Mustache.to_html(typeTemplate, data);

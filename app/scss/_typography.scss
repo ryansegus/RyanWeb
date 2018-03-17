@@ -54,22 +54,19 @@ h2 {
 }
 
 h2 {
-    display: table;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
     &:before,
     &:after {
+        content: "";
+        flex: 1;
         border-top: 1px dotted $primaryColor;
-        content: '';
-        display: table-cell;
-        position: relative;
-        top: 0.6em;
-        width: 45%;
     }
     &:before {
-        right: 1.5%;
+        margin-right: $pad;
     }
     &:after {
-        left: 1.5%;
+        margin-left: $pad;
     }
 }
 
