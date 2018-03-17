@@ -80,24 +80,22 @@
     .inner.left {
         transform: rotate(-45deg);
     }
-}
-
-.buttonWrap.state {
-    span.right {
-        animation: animateRightOut 1.2s linear;
+    &.state{
+        span.right {
+            animation: animateRightOut 1.2s linear;
+        }
+        span.left {
+            animation: animateLeftOut 1.2s linear;
+        }
     }
-    span.left {
-        animation: animateLeftOut 1.2s linear;
-    }
-}
-
-.buttonWrap.active {
-    transform: rotate(0deg);
-    span.right {
-        animation: animateRight 1.2s linear;
-    }
-    span.left {
-        animation: animateLeft 1.2s linear;
+    &.isOpen{
+        transform: rotate(0deg);
+        span.right {
+            animation: animateRight 1.2s linear;
+        }
+        span.left {
+            animation: animateLeft 1.2s linear;
+        }
     }
 }
 

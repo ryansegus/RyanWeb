@@ -18,6 +18,7 @@ var cache = require('gulp-cache');
 var del = require('del');
 var cssnano = require('gulp-cssnano');
 var runSequence = require('run-sequence');
+var UglifyJS = require("uglify-es"); // can be a git checkout
 
 //Task options
 var input = 'app/scss/*.scss';
@@ -115,9 +116,9 @@ gulp.task('useref', function () {
     return gulp.src('app/index.html')
         .pipe(useref())
         // Minifies only if it's a JavaScript file
-        .pipe(gulpIf('*.js', uglify().on('error', function(e){
-            console.log(e);
-        })))
+        // .pipe(gulpIf('*.js', uglify().on('error', function(e){
+        //     console.log(e);
+        // })))
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'))

@@ -28,6 +28,9 @@ $galleryItemH:100px;
 %transition {
     transition: all 0.6s cubic-bezier(.37, .1, .64, .93);
 }
+%transitionOpacityHeight{
+    transition:opacity 300ms 600ms, height 300ms 600ms;
+}
 .flexRowNoWrap {
     display: flex;
     flex-flow: row nowrap;
@@ -36,6 +39,10 @@ $galleryItemH:100px;
 .flexColNoWrap {
     display: flex;
     flex-flow: column nowrap;
+}
+.flexCol{
+    display:flex;
+    flex-direction:column;
 }
 
 .bgColorPrimary {

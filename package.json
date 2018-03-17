@@ -29,7 +29,8 @@
     "owl.carousel": "^2.2.0",
     "run-sequence": "^2.2.0",
     "sassdoc": "^2.3.0",
-    "typi": "^3.1.1"
+    "typi": "^3.1.1",
+    "uglify-es": "^3.3.9"
   },
   "dependencies": {
     "chart.js": "^2.7.0",
