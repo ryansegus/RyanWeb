@@ -135,22 +135,17 @@ function makeLISTSkills(array, str, classes) {
 // PRELOAD IMAGES //
 /* -------------------- */
 $.preloadImages = function () {
-    for (var i = 0; i < arguments.length; i++) {
+    for (let i = 0; i < arguments.length; i++) {
         $("<img />").attr("src", arguments[i]);
     }
-}
+};
 
 /* PADDING TOP ON GALLERY */
-var galleryTop = 0;
+let galleryTop = 0;
 
 function checkWidth() {
-    galleryTop = 60;
-    if (window.matchMedia("(orientation: portrait)").matches) {
-        galleryTop = 60;
-    } else {
-        galleryTop = 0;
-    }
-    return galleryTop;
+
+    (window.matchMedia("(orientation: portrait)").matches) ? galleryTop = 60 : galleryTop = 0 ;
 }
 
 /* ANIMATE HEADER */
@@ -178,94 +173,14 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });*/
 
-var $expCont = $id('experience');
-
-/* ----------------------------- */
-// LOAD TEMPLATES INTO SECTIONS //
-/* ---------------------------- */
-
-/* ABOUT */
-$.getJSON('json/about.json', function (data) {
-
-    $('#aboutMe').html(Mustache.render("<h2>{{{aboutMeTitle}}}</h2><p>{{{description}}}</p>", data));
-
-    typeTemplate = $('#aboutMeTypologyTmpl').html();
-    typology = Mustache.to_html(typeTemplate, data);
-    $('#typology').html(typology);
-
-});
-
-/* EDUCATION */
-$.getJSON('json/education.json', function (data) {
-    var template = $('#educationTmpl').html();
-    var html = Mustache.to_html(template, data);
-    $('#education').html(html);
-});
-
-/* EXPERIENCE */
-$.getJSON('json/experience.json', function (data) {
-    var template = $('#expTmpl').html();
-    var html = Mustache.to_html(template, data);
-    $($expCont).html(html);
-});
-
-/* INTERESTS */
-$.getJSON('json/interests.json', function (data) {
-    likes = $('#interestsLikesTmpl').html();
-    likesText = Mustache.to_html(likes, data);
-    $('#likes').html(likesText);
-
-    dislikes = $('#interestsDisLikesTmpl').html();
-    dislikesText = Mustache.to_html(dislikes, data);
-    $('#dislikes').html(dislikesText);
-});
-
-/* FOOTER */
-$.getJSON('json/footer.json', function (data) {
-
-    /*$('#footer').html(Mustache.render("<h1>{{footerTitle}}</h1>", data));*/
-
-    template = $('#footerTmpl').html();
-    html = Mustache.to_html(template, data);
-    $('#footer').html(html);
-});
-
-
 /* WHEN DOCUMENT RDY */
 $(function () {
 
+    // LOAD TYPEWRITTER AT HEADER
     var sono = $id('sono');
     window.ityped.init(sono, {
         strings: ['Ryan Serrano', 'creativo', 'progettista', 'sviluppatore', 'sognatore'],
         loop: true
-    });
-
-
-    // SHOW/HIDE EXPERIENCE LISTS
-    // document.querySelector('.blur-image');
-    /*$('.buttonWrap').click(function (e) {
-        console.log(this);
-        e.preventDefault();
-        $(this).parent().parent().next('div').slideToggle(300);
-        $(this).toggleClass('active');
-        $(this).addClass("state");
-    });*/
-
-    $($expCont).on("click", '.buttonWrap', function (e) {
-        e.preventDefault();
-        $parent = $(this).parent().parent();
-        $currentDefinition = $parent.next('.experience__definition');
-        $parent.siblings('.experience__company').removeClass("isNext");
-        $currentDefinition.slideToggle(300).toggleClass("isOpen");
-
-        if ($currentDefinition.hasClass("isOpen")) {
-
-            $parent.nextAll('.experience__company').eq(0).addClass("isNext");
-        }
-
-        $(this).toggleClass('active');
-        $(this).addClass("state");
-
     });
 
     // CREATE GALLERY
@@ -304,7 +219,7 @@ $(function () {
         $('#gallery').children('div').removeClass('active');
         $('#gallery').children('.projectDesc').slideUp(300, function () {
             this.remove();
-        })
+        });
 
         id = $(this).attr('data-id');
         item = $(this).parent().parent().parent();
@@ -315,7 +230,7 @@ $(function () {
         setTimeout(function () {
 
             $('html, body').animate({
-                scrollTop: $(item).offset().top - galleryTop
+                scrollTop: $(item).offset().top - ((window.matchMedia("(orientation: portrait)").matches) ? 60 : 0)
             }, 600);
 
         }, 1200);
@@ -458,7 +373,7 @@ $(function () {
                         hoverBorderColor: ["#FFFFFF", "#FFFFFF"],
 
                         borderWidth: 2,
-                        hoverBorderWidth: 2,
+                        hoverBorderWidth: 2
 
                     }
                 ],
@@ -466,7 +381,7 @@ $(function () {
             },
             options: {
                 legend: {
-                    display: false,
+                    display: false
                 },
                 legendCallback: function (chart, labels) {
                     var text = [];
@@ -492,7 +407,7 @@ $(function () {
                     }
                 },
                 responsive: true,
-                cutoutPercentage: 75,
+                cutoutPercentage: 75
             }
         });
     }
@@ -537,10 +452,7 @@ $(function () {
     for (i = 0; i < newObjArrLength; i++) {
 
         shortName = softwares[i].shortName;
-
         holderName = "softwareChart" + shortName;
-
-        //        legend = document.getElementById("legend" + shortName);
 
         ctx = document.getElementById(holderName).getContext("2d");
 
@@ -549,67 +461,7 @@ $(function () {
 
     }
 
-    /*el = document.getElementById('socials');
-    for (i = 0; i < Object.keys(socials).length; i++) {
-        txt = socials[i].labelIt;
-        iconclass = txt.toLowerCase();
-
-        li = document.createElement('li');
-        alink = document.createElement('a');
-        alink.setAttribute('href', socials[i].linkTo)
-        alink.setAttribute('title', socials[i].labelIt)
-        svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-        svg.setAttribute('width', 100)
-        svg.setAttribute('height', 100)
-        svg.setAttribute('viewBox', "0 0 100 100")
-        svg.setAttribute('class', iconclass)
-        svg.innerHTML = socials[i].iconSVG;
-
-        li.appendChild(alink);
-        alink.appendChild(svg);
-        el.appendChild(li);
-
-    }*/
-
     $.preloadImages("img/portfolio/img-01.jpg", "img/portfolio/img-02.jpg", "img/portfolio/img-03.jpg", "img/portfolio/img-04.jpg", "img/portfolio/img-05.jpg", "img/portfolio/img-06.jpg", "img/portfolio/img-07.jpg", "img/portfolio/img-08.jpg", "img/portfolio/logo_ryan_2017.jpg", "img/portfolio/tei-post.jpg");
-
-    function addEvent(el, type, handler) {
-        if (el.attachEvent) el.attachEvent("on" + type, handler);
-        else el.addEventListener(type, handler);
-    }
-
-    function removeEvent(el, type, handler) {
-        if (el.detachEvent) el.detachEvent("on" + type, handler);
-        else el.removeEventListener(type, handler);
-    }
-
-    function hasClass(el, className) {
-        return el.classList ?
-            el.classList.contains(className) :
-            new RegExp("\\b" + className + "\\b").test(el.className);
-    }
-
-    function addClass(el, className) {
-        if (el.classList) el.classList.add(className);
-        else if (!hasClass(el, className)) el.className += " " + className;
-    }
-
-    function removeClass(el, className) {
-        if (el.classList) el.classList.remove(className);
-        else
-            el.className = el.className.replace(
-                new RegExp("\\b" + className + "\\b", "g"),
-                ""
-            );
-    }
-
-    function loadJS(u) {
-        var r = document.getElementsByTagName("script")[0],
-            s = document.createElement("script");
-        s.src = u;
-        r.parentNode.insertBefore(s, r);
-    }
 
     if (!window.HTMLPictureElement || !('sizes' in document.createElement('img'))) {
         loadJS("ls.respimg.min.js");

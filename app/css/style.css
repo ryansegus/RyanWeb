@@ -470,7 +470,7 @@ template {
 
 .overlay, header, header .headerContainer, header .flexWrap, #page, #btnInfographics, #infographics, footer, section, .grid, .grid.IsActive, .grid.IsActive #page,
 .grid.IsActive #infographics,
-.grid.IsActive footer, .experience .experience__company, #btnInfographics svg, .gallery > div, .gallery .projectDesc, .gallery figure, .gallery figure figcaption .openModal > div {
+.grid.IsActive footer, #btnInfographics svg, .gallery > div, .gallery .projectDesc, .gallery figure, .gallery figure figcaption .openModal > div {
   -webkit-transition: all 0.6s cubic-bezier(0.37, 0.1, 0.64, 0.93);
   transition: all 0.6s cubic-bezier(0.37, 0.1, 0.64, 0.93);
 }
@@ -493,6 +493,16 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+}
+
+.flexCol, .experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .bgColorPrimary, .web > div:nth-child(-n + 8), .print > div:nth-child(-n + 8), .branding > div:nth-child(-n + 6), .illustration > div:nth-child(-n + 4), .layout > div:nth-child(-n + 4), .creativity > div:nth-child(-n + 9), .leadership > div:nth-child(-n + 8), .organization > div:nth-child(-n + 6) {
@@ -1106,7 +1116,6 @@ h2 {
 
 h3, .experience .experience__company {
   font-size: 1.17049em;
-  line-height: 1;
 }
 
 @media (min-width: 20em) and (max-width: 60em) {
@@ -1123,7 +1132,6 @@ h3, .experience .experience__company {
 
 h4 {
   font-size: 1.11065em;
-  line-height: 1;
 }
 
 @media (min-width: 20em) and (max-width: 60em) {
@@ -1139,35 +1147,31 @@ h4 {
 }
 
 h5 {
-  font-size: 1.08189em;
-  line-height: 1;
+  font-size: 1.0706em;
 }
 
 @media (min-width: 20em) and (max-width: 60em) {
   h5 {
-    font-size: calc( 1.08189em + 0.14925 * ( ( 100vw - 20em) / 40 ));
+    font-size: calc( 1.0706em + 0.12688 * ( ( 100vw - 20em) / 40 ));
   }
 }
 
 @media (min-width: 60em) {
   h5 {
-    font-size: 1.23114em;
+    font-size: 1.19748em;
   }
 }
 
 .hero,
 h1,
-h2,
-h3,
-.experience .experience__company {
+h2 {
   font-weight: 400;
   text-align: center;
 }
 
 .hero span,
 h1 span,
-h2 span,
-h3 span, .experience .experience__company span {
+h2 span {
   color: #8dc63f;
   font-weight: 100;
   text-transform: capitalize;
@@ -1747,47 +1751,84 @@ s {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
   text-transform: capitalize;
   color: dimgray;
-  border-bottom: 1px solid #8dc63f;
   padding: 0.5em;
   margin: 0;
-  -webkit-transition-delay: 200ms;
-          transition-delay: 200ms;
 }
 
-.experience .experience__company span {
-  -ms-flex-item-align: center;
-      align-self: center;
+.experience .experience__company.isOpen {
+  color: #8dc63f;
 }
 
-.experience .experience__company.isNext {
-  border-top: 1px solid #8dc63f;
+.experience .experience__body {
+  border-bottom: 1px solid #8dc63f;
+  overflow: hidden;
+  padding: 0 1em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0px;
+          flex: 0 0 0;
+  margin: 0;
+  -webkit-transition: height, padding, margin, -webkit-flex-basis;
+  transition: height, padding, margin, -webkit-flex-basis;
+  transition: height, padding, margin, flex-basis;
+  transition: height, padding, margin, flex-basis, -webkit-flex-basis, -ms-flex-preferred-size;
+  -webkit-transition-duration: 600ms;
+          transition-duration: 600ms;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
 }
 
-.experience > dd, .experience .experience__definition {
-  position: relative;
-  display: none;
-  padding: 0.5em 0;
+.experience .experience__body > * {
+  overflow: hidden;
 }
 
-.experience > dd h3, .experience > dd .experience__company, .experience > dd h4, .experience > dd h5, .experience .experience__definition h3, .experience .experience__definition .experience__company, .experience .experience__definition h4, .experience .experience__definition h5 {
+.experience .experience__body * {
+  opacity: 0;
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 600ms 0ms;
+  transition: opacity 600ms 0ms;
+}
+
+.experience .experience__body h3, .experience .experience__body .experience__company, .experience .experience__body h4, .experience .experience__body h5, .experience .experience__body h6 {
   text-align: left;
   font-weight: 400;
   color: dimgray;
 }
 
-.experience > dd .experience__position, .experience .experience__definition .experience__position {
-  margin: 0.5em 0 0.25em 0;
+.experience .experience__body .experience__position {
+  margin: 0 0 0.25em 0;
 }
 
-.experience > dd .experience__date, .experience .experience__definition .experience__date {
+.experience .experience__body .experience__date {
   margin: 0;
-  color: #8dc63f;
 }
 
-.experience > dd .experience__responsability, .experience .experience__definition .experience__responsability {
+.experience .experience__body .experience__responsability {
   margin: 1em 0;
+}
+
+.experience .experience__body.isOpen {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding: 0 1em 1em 1em;
+  border-bottom: 1px solid #8dc63f;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.experience .experience__body.isOpen * {
+  opacity: 1;
+  -webkit-transition: opacity 600ms 300ms;
+  transition: opacity 600ms 300ms;
 }
 
 .experience ul {
@@ -1894,17 +1935,17 @@ s {
           animation: animateLeftOut 1.2s linear;
 }
 
-.buttonWrap.active {
+.buttonWrap.isOpen {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.buttonWrap.active span.right {
+.buttonWrap.isOpen span.right {
   -webkit-animation: animateRight 1.2s linear;
           animation: animateRight 1.2s linear;
 }
 
-.buttonWrap.active span.left {
+.buttonWrap.isOpen span.left {
   -webkit-animation: animateLeft 1.2s linear;
           animation: animateLeft 1.2s linear;
 }

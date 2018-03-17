@@ -179,13 +179,23 @@
 </script>
 <script id="expTmpl" type="text/template">
     {{#experience}}
-    <dt class="experience__company">{{company}}<span><div class="buttonWrap"><div class="inner right"><span class="left"></span><span
-            class="right"></span></div>
-            <div class="inner left"><span class="left"></span><span class="right"></span></div>
+    <dt class="experience__header experience__company">{{company}}
+        <span>
+            <div class="buttonWrap js-experienceButton">
+                <div class="inner right">
+                    <span class="left">
+                    </span>
+                    <span class="right">
+                    </span>
+                </div>
+            <div class="inner left">
+                <span class="left"></span>
+                <span class="right"></span>
             </div>
-            </span>
+            </div>
+        </span>
     </dt>
-    <dd class="experience__definition">
+    <dd class="experience__body">
         <hgroup>
             <h3 class="experience__position">{{{position}}}</h3>
             <h4 class="experience__date">{{address}} ({{date}})</h4>
@@ -235,7 +245,9 @@
 <!--build:js js/main.min.js -->
 <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>-->
+<script src="js/helpers.js"></script>
 <script src="js/constants.js"></script>
+<script src="js/loadSections.js"></script>
 <script src="js/softwares.js"></script>
 <script src="js/socials.js"></script>
 <script src="plugins/bower_components/lazysizes/plugins/bgset/ls.bgset.min.js"></script>
@@ -244,11 +256,12 @@
 <script src="plugins/bower_components/mustache.js/mustache.min.js"></script>
 <script src="js/ityped.min.js"></script>
 <script src="plugins/bower_components/chart.js/dist/Chart.min.js"></script>
+<script src="js/experience.js"></script>
+<script src="js/educationCarousel.js"></script>
 <!--<script src="https://pawelgrzybek.com/siema/assets/siema.min.js"></script>-->
 <script src="js/main.js"></script>
 <!-- endbuild -->
 
-<script src="js/educationCarousel.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
 <script src="https://pawelgrzybek.com/siema/assets/siema.min.js"></script>
 </body>
