@@ -28,6 +28,14 @@ $.getJSON('json/experience.json', function (data) {
     // $('#experience').html(html);
 });
 
+/* INFOGRAPHICS */
+$.getJSON('json/infographics.json', function (data) {
+    let template = $('#infographicsContainerTmpl').html();
+    let html = Mustache.to_html(template, data);
+    $('#infographicsContainer').html(html);
+    // id('likes').innerHTML = html;
+});
+
 /* INTERESTS */
 $.getJSON('json/interests.json', function (data) {
     likes = $('#interestsLikesTmpl').html();
@@ -38,7 +46,6 @@ $.getJSON('json/interests.json', function (data) {
     dislikesText = Mustache.to_html(dislikes, data);
     $('#dislikes').html(dislikesText);
 });
-
 /* FOOTER */
 $.getJSON('json/footer.json', function (data) {
 

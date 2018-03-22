@@ -14,16 +14,6 @@ var portafoglio = [
     ['tei-post.jpg', 'Tu Enlace Inmobiliario', 'Post reti sociali', 'Immagine presa per promuovere l&#39;immagine aziendale dell&#39;azienda in Instagram e in altre reti sociali.']
 ];
 
-var skills = [
-    ['WEB', 'STAMPE', 'BRANDING', 'ILLUSTRAZIONE', 'LAYOUT'],
-    ['CREATIVITÀ', 'LEADERSHIP', 'ORGANIZZAZIONE']
-
-];
-var skillclasses = [
-    ['web', 'print', 'branding', 'illustration', 'layout'],
-    ['creativity', 'leadership', 'organization']
-];
-
 var langObj = {
     bgColor: ["#8dc63f", "#1d1d1d"],
     language: [
@@ -96,40 +86,7 @@ function buildGallery(array) {
 
 }
 
-/* -------------------- */
-// CREATE SKILLS DOTS //
-/* -------------------- */
-function makeLISTSkills(array, str, classes) {
-    container = $id(str);
-    // Create the UL element:
-    ul = document.createElement("ul");
-    ulDots = document.createElement("ul");
 
-    for (var i = 0; i < array.length; i++) {
-        // Create the list item:
-        li = document.createElement("li");
-        li.setAttribute("class", "hvr-sweep-to-left");
-        liDots = document.createElement("li");
-        liDots.classList.add(classes[i]);
-
-        for (var k = 0; k < 10; k++) {
-
-            circle = document.createElement('div');
-            liDots.appendChild(circle);
-        }
-
-        // Set its contents:
-        li.appendChild(document.createTextNode(array[i]));
-
-        // Add it to the list:
-        ul.appendChild(li);
-        ulDots.appendChild(liDots);
-    }
-    // Finally, return the constructed list:
-    container.appendChild(ul);
-    container.appendChild(ulDots);
-    return container;
-}
 
 /* -------------------- */
 // PRELOAD IMAGES //
@@ -262,10 +219,6 @@ $(function () {
     /*  DOUGHNUT CHART CONFIGURATION */
     Chart.defaults.doughnut.cutoutPercentage = 60;
     Chart.defaults.global.tooltips.bodyfontFamily = 'Encode Sans Condensed';
-
-    /* CREATE SKILLS DOTS  */
-    makeLISTSkills(skills[0], 'skills', skillclasses[0]);
-    makeLISTSkills(skills[1], 'skills', skillclasses[1]);
 
     /* CREATE LANGUAGES OBJECTS langObj  */
     var objArr = [];
