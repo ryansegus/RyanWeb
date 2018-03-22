@@ -1,7 +1,7 @@
 /* VARS */
 
 
-var portafoglio = [
+const portafoglio = [
     ['img-01.jpg', 'Grupo Menosesmas', 'Logotipo', 'Nel corso del tempo abbiamo migliorato i nostri gusti e finalmente è arrivato all&#39;immagine che riassume l&#39;essenza della nostra azienda.'],
     ['img-02.jpg', 'Natalia Marcano', 'identidad', 'Un design minimalista di biglietti personali, il cui dado fa l&#39;impatto dei clienti di questo grande architetto.'],
     ['img-03.jpg', 'PDVSA FPO', 'diagramacion', 'Progettazione di una doppia pagina del libro per il FPO, ha una serie di infographics disposti in modo elegante più il sondaggio 3d in base alla densità di popolazione della zona.'],
@@ -14,17 +14,17 @@ var portafoglio = [
     ['tei-post.jpg', 'Tu Enlace Inmobiliario', 'Post reti sociali', 'Immagine presa per promuovere l&#39;immagine aziendale dell&#39;azienda in Instagram e in altre reti sociali.']
 ];
 
-var skills = [
+const skills = [
     ['WEB', 'STAMPE', 'BRANDING', 'ILLUSTRAZIONE', 'LAYOUT'],
     ['CREATIVITÀ', 'LEADERSHIP', 'ORGANIZZAZIONE']
 
 ];
-var skillclasses = [
+const skillclasses = [
     ['web', 'print', 'branding', 'illustration', 'layout'],
     ['creativity', 'leadership', 'organization']
 ];
 
-var langObj = {
+const langObj = {
     bgColor: ["#8dc63f", "#1d1d1d"],
     language: [
         {
@@ -45,17 +45,12 @@ var langObj = {
     ]
 };
 
-/* FUNCTIONS */
-
-$id = function (id) {
-    return document.getElementById(id);
-};
 /* --------------------- */
 // SHOW OVERLAY FUNCTION //
 /* --------------------- */
 
-function showOverlay(e) {
-    el = document.querySelector('.overlay');
+function showOverlay() {
+    const el = getElementById('overlay');
 
     el.style.opacity = "1";
     el.style.filter = 'alpha(opacity=100)';
@@ -100,7 +95,7 @@ function buildGallery(array) {
 // CREATE SKILLS DOTS //
 /* -------------------- */
 function makeLISTSkills(array, str, classes) {
-    container = $id(str);
+    container = getElementById(str);
     // Create the UL element:
     ul = document.createElement("ul");
     ulDots = document.createElement("ul");
@@ -148,40 +143,8 @@ function checkWidth() {
     (window.matchMedia("(orientation: portrait)").matches) ? galleryTop = 60 : galleryTop = 0 ;
 }
 
-/* ANIMATE HEADER */
-/*window.onscroll = function () {
-    home = document.getElementById('home');
-    if (window.pageYOffset > 75) {
-        home.classList.add("fixed");
-    } else {
-        home.classList.remove("fixed");
-    }
-}*/
-
-/*var a = document.querySelector('.blur-image');
-
-document.addEventListener("DOMContentLoaded", function () {
-    if (!a) return !1;
-    var b = a.getAttribute("data-src"),
-        c = document.querySelector('.full-image'),
-        img = new Image;
-
-    img.src = b;
-    img.onload = function () {
-        c.classList.add('image-loaded'),
-            c.style.backgroundImage = 'url(' + b + ')';
-    };
-});*/
-
 /* WHEN DOCUMENT RDY */
 $(function () {
-
-    // LOAD TYPEWRITTER AT HEADER
-    var sono = $id('sono');
-    window.ityped.init(sono, {
-        strings: ['Ryan Serrano', 'creativo', 'progettista', 'sviluppatore', 'sognatore'],
-        loop: true
-    });
 
     // CREATE GALLERY
     buildGallery(portafoglio);
@@ -469,19 +432,18 @@ $(function () {
 
     //    var a = document.querySelector('.blur-image');
     var grid = document.querySelector(".grid");
-    var page = $id('page');
-    var infoBtn = $id("btnInfographics");
-    var infoDiv = $id("infographics");
+    var infoBtn = getElementById("btnInfographics");
+    var infoDiv = getElementById("infographics");
     var footer = $('footer');
 
     btn = document.querySelector("header #togglePage");
     addEvent(btn, "click", function () {
 
-        $(page, infoBtn, infoDiv, footer).removeAttr('style');
+        $(MY_OBJECT.CONTAINERS.page, infoBtn, MY_OBJECT.CONTAINERS.infoGraphics, footer).removeAttr('style');
         showOverlay();
         setTimeout(function () {
             if (!hasClass(grid, "IsActive")) {
-                removeClass(infoDiv, "IsActive");
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
                 addClass(grid, "IsActive");
                 btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><title>Off</title><path d="M42 12H18C8.1 12 0 20.1 0 30s8.1 18 18 18h24c9.9 0 18-8.1 18-18S51.9 12 42 12zM18 38c0 0.6-0.4 1-1 1s-1-0.4-1-1V22c0-0.6 0.4-1 1-1s1 0.4 1 1V38zM42 43c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13S49.2 43 42 43z" /></svg>';
                 // LOAD SIEMA EDUCATION
@@ -490,7 +452,7 @@ $(function () {
                 // console.log('destroying');
                 SIEMA.destroySiema();
                 SIEMA.mySiema=null;
-                removeClass(infoDiv, "IsActive");
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
                 removeClass(grid, "IsActive");
                 btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><title>On</title><path d="M42 12H18C8.1 12 0 20.1 0 30s8.1 18 18 18h24c9.9 0 18-8.1 18-18S51.9 12 42 12zM18 43c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13S25.2 43 18 43zM49.7 26.7l-8 8C41.5 34.9 41.3 35 41 35s-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1 0-1.4s1-0.4 1.4 0L41 32.6l7.3-7.3c0.4-0.4 1-0.4 1.4 0S50.1 26.3 49.7 26.7z" /></svg>';
             }
@@ -506,28 +468,28 @@ $(function () {
 
         this.style.pointerEvents = 'none';
 
-        if (!hasClass(infoDiv, "IsActive")) {
+        if (!hasClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive")) {
 
             window.scroll({
                 top: 0,
                 behavior: 'smooth'
             });
             setTimeout(function () {
-                addClass(infoDiv, "IsActive");
+                addClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
             }, 300);
 
             setTimeout(function () {
-                $(page, footer).slideUp(200);
+                $(MY_OBJECT.CONTAINERS.page, footer).slideUp(200);
                 $(infoBtn).removeAttr('style');
             }, 600);
 
         } else {
 
             this.style.pointerEvents = 'none';
-            $(page, footer).slideDown(200);
+            $(MY_OBJECT.CONTAINERS.page, footer).slideDown(200);
 
             setTimeout(function () {
-                removeClass(infoDiv, "IsActive");
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
                 $(infoBtn).removeAttr('style');
                 //                window.scroll({
                 //                    top: 0,
@@ -541,11 +503,11 @@ $(function () {
     if (window.attachEvent) {
         window.attachEvent('onresize', function () {
 
-            if (window.matchMedia("(max-width: 1024px)").matches && hasClass(infoDiv, "IsActive")) {
+            if (window.matchMedia("(max-width: 1024px)").matches && hasClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive")) {
 
                 // console.log(' + 1024px onresize');
-                $(page, footer).css('display', 'block');
-                removeClass(infoDiv, "IsActive");
+                $(MY_OBJECT.CONTAINERS.page, footer).css('display', 'block');
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
             } else {
                 // console.log(' - 1024px onresize');
 
@@ -553,11 +515,11 @@ $(function () {
         });
     } else if (window.addEventListener) {
         window.addEventListener('resize', function () {
-            if (window.matchMedia("(max-width: 1024px)").matches && hasClass(infoDiv, "IsActive")) {
+            if (window.matchMedia("(max-width: 1024px)").matches && hasClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive")) {
 
                 // console.log(' + 1024px resize');
-                $(page, footer).css('display', 'block');
-                removeClass(infoDiv, "IsActive");
+                $(MY_OBJECT.CONTAINERS.page, footer).css('display', 'block');
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
             } else {
                 // console.log(' - 1024px resize');
 
@@ -566,4 +528,20 @@ $(function () {
     } else {
         //The browser does not support Javascript event binding
     }
+});
+
+/* ------------------ */
+// WHEN DOCUMENT RDY //
+/* ------------------ */
+window.addEventListener("load", function () {
+
+    /* --------------------------- */
+    // LOAD TYPEWRITTER AT HEADER //
+    /* -------------------------- */
+
+    window.ityped.init(MY_OBJECT.CONTAINERS.sono, {
+        strings: ['Ryan Serrano', 'creativo', 'progettista', 'sviluppatore', 'sognatore'],
+        loop: true
+    });
+
 });

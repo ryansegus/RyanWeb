@@ -1,4 +1,4 @@
-var vartxt = "";
+/*var vartxt = "";
 function writeSVG(path, svg) {
 
     $.get(path, function (svg) {
@@ -7,7 +7,7 @@ function writeSVG(path, svg) {
 
     }, 'html');
 
-}
+}*/
 
 //writeSVG('../img/icon/apple.svg');
 
@@ -22,7 +22,9 @@ function writeSVG(path, svg) {
 // const MY_OBJECT
 const MY_OBJECT = {
     CONTAINERS: {
-        "page":document.getElementById('page'),
+        "page":getElementById('page'),
+        "sono":getElementById('sono'),
+        "infoGraphics":getElementById("infographics")
     },
     WORDS: {
         'LEARNING': 'Imparando',
