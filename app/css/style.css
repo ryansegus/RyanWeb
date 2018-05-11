@@ -524,12 +524,12 @@ img {
   width: 100%;
 }
 
-.siema__layout .siema__arrowBtn {
+.siema-layout .siema-arrowBtn {
   display: none;
 }
 
 @media screen and (min-width: 48rem) {
-  .siema__layout .siema__arrowBtn {
+  .siema-layout .siema-arrowBtn {
     display: block;
   }
 }
@@ -1590,7 +1590,7 @@ s {
   opacity: 1;
 }
 
-.siema__layout {
+.siema-layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1602,13 +1602,13 @@ s {
           justify-content: space-between;
 }
 
-.siema__layout .siema__arrowBtn {
+.siema-layout .siema-arrowBtn {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
 }
 
-.siema__layout .siema__mainContent {
+.siema-layout .siema-mainContent {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -1616,20 +1616,20 @@ s {
   padding: 1em;
 }
 
-.siema__layout .siema__mainContent #education {
+.siema-layout .siema-mainContent #education {
   text-align: center;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.siema__layout .siema__mainContent #education > div > div {
+.siema-layout .siema-mainContent #education > div > div {
   padding: 1em 0;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
-.siema__layout .siema__mainContent #education ul.siema__navDots {
+.siema-layout .siema-mainContent #education ul.siema-navDots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1639,29 +1639,29 @@ s {
   clear: both;
 }
 
-.siema__layout .siema__mainContent #education ul.siema__navDots li {
+.siema-layout .siema-mainContent #education ul.siema-navDots li {
   width: 18px;
   height: 18px;
   margin-right: 4px;
   cursor: pointer;
 }
 
-.siema__layout .siema__mainContent #education ul.siema__navDots li:last-child {
+.siema-layout .siema-mainContent #education ul.siema-navDots li:last-child {
   margin-right: 0;
 }
 
-.siema__layout .siema__mainContent #education ul.siema__navDots li.isActive circle {
+.siema-layout .siema-mainContent #education ul.siema-navDots li.isActive circle {
   opacity: 1;
   stroke-dashoffset: 0;
   -webkit-transition: stroke-dashoffset 0.3s, opacity 0.15s;
   transition: stroke-dashoffset 0.3s, opacity 0.15s;
 }
 
-.siema__layout .siema__mainContent #education ul.siema__navDots svg {
+.siema-layout .siema-mainContent #education ul.siema-navDots svg {
   z-index: 10;
 }
 
-.siema__layout .siema__mainContent #education ul.siema__navDots svg circle {
+.siema-layout .siema-mainContent #education ul.siema-navDots svg circle {
   opacity: 1;
   fill: #EEE;
   stroke: #8dc63f;
@@ -1674,54 +1674,54 @@ s {
   transition: stroke-dashoffset 0.3s, opacity 0.3s;
 }
 
-.siema__title {
+.siema-title {
   font-size: 1.11065em;
   font-weight: 700;
 }
 
 @media (min-width: 20em) and (max-width: 60em) {
-  .siema__title {
+  .siema-title {
     font-size: calc( 1.11065em + 0.20886 * ( ( 100vw - 20em) / 40 ));
   }
 }
 
 @media (min-width: 60em) {
-  .siema__title {
+  .siema-title {
     font-size: 1.31951em;
   }
 }
 
-.siema__place {
+.siema-place {
   font-size: 1.23354em;
   font-weight: 300;
 }
 
 @media (min-width: 20em) and (max-width: 60em) {
-  .siema__place {
+  .siema-place {
     font-size: calc( 1.23354em + 0.50756 * ( ( 100vw - 20em) / 40 ));
   }
 }
 
 @media (min-width: 60em) {
-  .siema__place {
+  .siema-place {
     font-size: 1.7411em;
   }
 }
 
-.siema__date {
+.siema-date {
   font-size: 1.44385em;
   font-weight: 100;
   color: #8dc63f;
 }
 
 @media (min-width: 20em) and (max-width: 60em) {
-  .siema__date {
+  .siema-date {
     font-size: calc( 1.44385em + 1.19517 * ( ( 100vw - 20em) / 40 ));
   }
 }
 
 @media (min-width: 60em) {
-  .siema__date {
+  .siema-date {
     font-size: 2.63902em;
   }
 }

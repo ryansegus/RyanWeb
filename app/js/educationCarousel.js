@@ -1,5 +1,5 @@
-var mySiema=null;
-var resizeTimer;
+let mySiema=null;
+let resizeTimer;
 SIEMA = {
     holder: document.getElementById('education'),
     // navHolder: document.getElementById('siemaNav'),
@@ -33,12 +33,12 @@ SIEMA = {
     },
     addPaginationSiemaSlider: function () {
 
-        ulNav = document.createElement('ul');
-        ulNav.className='siema__navDots';
+        const ulNav = document.createElement('ul');
+        ulNav.className='siema-navDots';
 
         for (let i = 0; i < this.innerElements.length; i++) {
-            const btn = document.createElement('li');
-            btn.innerHTML= '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16"preserveAspectRatio="none"><circle cx="8" cy="8" r="6.215"/></svg>';
+            let btn = document.createElement('li');
+            btn.innerHTML= '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 16 16" preserveAspectRatio="none"><circle cx="8" cy="8" r="6.215"/></svg>';
             btn.dataset.slide = i;
 
             (i === 0) ? btn.className = "isActive" : false;
@@ -55,9 +55,9 @@ SIEMA = {
     },
     getSiemaSliderIndex: function (index) {
 
-        currentSlide = (index === undefined) ? this.currentSlide : index;
+        let currentSlide = (index === undefined) ? this.currentSlide : index;
         // $(SIEMA.holder).find('button').removeClass('isActive');
-        $(SIEMA.holder).find('.siema__navDots li').removeClass('isActive');
+        $(SIEMA.holder).find('.siema-navDots li').removeClass('isActive');
         $(SIEMA.holder).find("[data-slide='" + currentSlide + "']").addClass('isActive');
 
         // console.log('getSiemaSliderIndex')
@@ -86,6 +86,7 @@ SIEMA = {
     }
 
 };
-$(document).ready(function (){
-    SIEMA.bindAll();
-});
+
+/* WHEN DOCUMENT RDY
+   ----------------------------- */
+window.addEventListener("load", function () {SIEMA.bindAll()});

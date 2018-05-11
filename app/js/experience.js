@@ -14,8 +14,8 @@ window.addEventListener("load", function () {
             event.preventDefault();
 
             // VARS
-            const currentTitle = this.parentNode.parentNode;
-            const currentDefinition = this.parentNode.parentNode.nextElementSibling;
+            const currentTitle = this.parentNode;
+            const currentDefinition = this.parentNode.nextElementSibling;
 
             // SHOW/HIDE EXPERIENCE LISTS
             toggleClassWithName(this, 'isOpen');

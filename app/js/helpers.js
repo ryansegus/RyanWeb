@@ -1,6 +1,7 @@
-function getElById(id) {
+getElementById = function (id) {
+
     return document.getElementById(id);
-}
+};
 
 function addEvent(el, type, handler) {
 
@@ -9,12 +10,12 @@ function addEvent(el, type, handler) {
 
 }
 
-function removeEvent(el, type, handler) {
+/*function removeEvent(el, type, handler) {
 
     if (el.detachEvent) el.detachEvent("on" + type, handler);
     else el.removeEventListener(type, handler);
 
-}
+}*/
 
 function hasClass(el, className) {
 
@@ -44,16 +45,16 @@ function removeClass(el, className) {
 
 function loadJS(u) {
 
-    var r = document.getElementsByTagName("script")[0],
+    const r = document.getElementsByTagName("script")[0],
         s = document.createElement("script");
     s.src = u;
     r.parentNode.insertBefore(s, r);
 
 }
 
-function toggle(el) {
+/*function toggle(el) {
     hasClass(el, 'is_hidden') ? removeClass(el, 'is_hidden') : addClass(el, 'is_hidden');
-}
+}*/
 
 function toggleClassWithName(el, className) {
 
@@ -61,8 +62,9 @@ function toggleClassWithName(el, className) {
 
 }
 
+/*
 function addEventListenerList(list, event, fn) {
-    for (var i = 0, len = list.length; i < len; i++) {
+    for (let i = 0, len = list.length; i < len; i++) {
         list[i].addEventListener(event, fn, false);
     }
-}
+}*/

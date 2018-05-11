@@ -1,15 +1,15 @@
 .siema{
   $self:&;
-  &__layout{
+  &-layout{
 	display:flex;
 	align-items:center;
 	justify-content:space-between;
 
-	#{ $self }__arrowBtn{
+	#{ $self }-arrowBtn{
 	  flex:0 0 auto;
 	  @extend %hidden-mobile;
 	}
-	#{ $self }__mainContent{
+	#{ $self }-mainContent{
 	  flex:1 1 auto;
 	  overflow:hidden;
 	  padding:$pad;
@@ -21,7 +21,7 @@
 		  padding:$pad 0;
 		  transform:translate3d(0, 0, 0);
 		}
-		ul#{ $self }__navDots{
+		ul#{ $self }-navDots{
 		  display:flex;
 		  justify-content:center;
 		  clear:both;
@@ -61,17 +61,17 @@
 	  }
 	}
   }
-  &__title{
+  &-title{
 	@include ms-respond(font-size, 2);
 	font-weight:700;
   }
 
-  &__place{
+  &-place{
 	@include ms-respond(font-size, 4);
 	font-weight:300;
   }
 
-  &__date{
+  &-date{
 	@include ms-respond(font-size, 7);
 	font-weight:100;
 	color:$primaryColor;

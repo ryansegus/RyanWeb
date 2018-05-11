@@ -1,7 +1,4 @@
-/* VARS */
-
-
-var portafoglio = [
+const portafoglio = [
     ['img-01.jpg', 'Grupo Menosesmas', 'Logotipo', 'Nel corso del tempo abbiamo migliorato i nostri gusti e finalmente è arrivato all&#39;immagine che riassume l&#39;essenza della nostra azienda.'],
     ['img-02.jpg', 'Natalia Marcano', 'identidad', 'Un design minimalista di biglietti personali, il cui dado fa l&#39;impatto dei clienti di questo grande architetto.'],
     ['img-03.jpg', 'PDVSA FPO', 'diagramacion', 'Progettazione di una doppia pagina del libro per il FPO, ha una serie di infographics disposti in modo elegante più il sondaggio 3d in base alla densità di popolazione della zona.'],
@@ -14,38 +11,12 @@ var portafoglio = [
     ['tei-post.jpg', 'Tu Enlace Inmobiliario', 'Post reti sociali', 'Immagine presa per promuovere l&#39;immagine aziendale dell&#39;azienda in Instagram e in altre reti sociali.']
 ];
 
-var langObj = {
-    bgColor: ["#8dc63f", "#1d1d1d"],
-    language: [
-        {
-            labelIt: "Spagnolo",
-            shortName: "Es",
-            value: 90
-        },
-        {
-            labelIt: "Inglese",
-            shortName: "En",
-            value: 80
-        },
-        {
-            labelIt: "Italiano",
-            shortName: "It",
-            value: 60
-        }
-    ]
-};
-
-/* FUNCTIONS */
-
-$id = function (id) {
-    return document.getElementById(id);
-};
 /* --------------------- */
 // SHOW OVERLAY FUNCTION //
 /* --------------------- */
 
-function showOverlay(e) {
-    el = document.querySelector('.overlay');
+function showOverlay() {
+    const el = getElementById('overlay');
 
     el.style.opacity = "1";
     el.style.filter = 'alpha(opacity=100)';
@@ -105,40 +76,8 @@ function checkWidth() {
     (window.matchMedia("(orientation: portrait)").matches) ? galleryTop = 60 : galleryTop = 0 ;
 }
 
-/* ANIMATE HEADER */
-/*window.onscroll = function () {
-    home = document.getElementById('home');
-    if (window.pageYOffset > 75) {
-        home.classList.add("fixed");
-    } else {
-        home.classList.remove("fixed");
-    }
-}*/
-
-/*var a = document.querySelector('.blur-image');
-
-document.addEventListener("DOMContentLoaded", function () {
-    if (!a) return !1;
-    var b = a.getAttribute("data-src"),
-        c = document.querySelector('.full-image'),
-        img = new Image;
-
-    img.src = b;
-    img.onload = function () {
-        c.classList.add('image-loaded'),
-            c.style.backgroundImage = 'url(' + b + ')';
-    };
-});*/
-
 /* WHEN DOCUMENT RDY */
 $(function () {
-
-    // LOAD TYPEWRITTER AT HEADER
-    var sono = $id('sono');
-    window.ityped.init(sono, {
-        strings: ['Ryan Serrano', 'creativo', 'progettista', 'sviluppatore', 'sognatore'],
-        loop: true
-    });
 
     // CREATE GALLERY
     buildGallery(portafoglio);
@@ -206,21 +145,19 @@ $(function () {
         })
     });
 
-    /* CHARTS JS */
-
     /* GLOBALS CHART CONFIGURATION */
-    Chart.defaults.global.layout.padding = 0;
+    /*Chart.defaults.global.layout.padding = 0;
     Chart.defaults.global.legend.position = 'bottom';
 
-    /* ARCS CHART CONFIGURATION */
+    /!* ARCS CHART CONFIGURATION *!/
     Chart.defaults.global.elements.arc.backgroundColor = 'rgb(29, 29, 29)';
     Chart.defaults.global.elements.arc.hoverBorderColor = 'rgb(255, 255, 255)';
 
-    /*  DOUGHNUT CHART CONFIGURATION */
+    /!*  DOUGHNUT CHART CONFIGURATION *!/
     Chart.defaults.doughnut.cutoutPercentage = 60;
     Chart.defaults.global.tooltips.bodyfontFamily = 'Encode Sans Condensed';
 
-    /* CREATE LANGUAGES OBJECTS langObj  */
+    /!* CREATE LANGUAGES OBJECTS langObj  *!/
     var objArr = [];
     var objArrLength = Object.keys(langObj.language).length;
 
@@ -270,9 +207,9 @@ $(function () {
         });
     }
 
-    /* CREATE DIVS & CANVAS WITH OBJ */
+    /!* CREATE DIVS & CANVAS WITH OBJ *!/
     var ctx = [];
-    var Container = document.getElementById("languages");
+    let Container = document.getElementById("languages");
 
     for (i = 0; i < objArrLength; i++) {
         divCol = document.createElement("div");
@@ -294,7 +231,7 @@ $(function () {
         canvasContainer.appendChild(canvas);
     }
 
-    /* DRAW LANGUAGE CHARTS & LEGENDS WITH OBJ */
+    /!* DRAW LANGUAGE CHARTS & LEGENDS WITH OBJ *!/
     newObjArrLength = Object.keys(objArr).length;
     for (i = 0; i < newObjArrLength; i++) {
 
@@ -310,7 +247,7 @@ $(function () {
 
     }
 
-    /* CREATE SOFTWARES OBJECTS softwaresObj  */
+    /!* CREATE SOFTWARES OBJECTS softwaresObj  *!/
     var softwaresObj = [];
     var softwaresObjLength = Object.keys(softwares).length;
     //    document.write(softwaresObjLength);
@@ -365,7 +302,7 @@ $(function () {
         });
     }
 
-    /* CREATE SOFTWARES DIVS & CANVAS WITH OBJ softwaresObj */
+    /!* CREATE SOFTWARES DIVS & CANVAS WITH OBJ softwaresObj *!/
     var ctx = [];
     var el = document.getElementById("whatiuse");
 
@@ -376,10 +313,10 @@ $(function () {
         canvasContainer = document.createElement("div");
 
         // CREATE IMG WITH ICON SVG
-        /*img = document.createElement("img");
+        /!*img = document.createElement("img");
         img.setAttribute("class", "langLegend");
         img.setAttribute("src", "img/icon/" + icon + ".svg"); //softwares[i].icon);
-        img.setAttribute("alt", icon);*/
+        img.setAttribute("alt", icon);*!/
 
         // CREATE ICON SVG INLINE
         svg = document.createElement("div");
@@ -400,7 +337,7 @@ $(function () {
     }
     //    console.log(softwaresObj)
 
-    /* DRAW CHARTS & LEGENDS WITH OBJ */
+    /!* DRAW CHARTS & LEGENDS WITH OBJ *!/
     newObjArrLength = Object.keys(softwaresObj).length;
     for (i = 0; i < newObjArrLength; i++) {
 
@@ -412,7 +349,7 @@ $(function () {
         shortName = new Chart(ctx, softwaresObj[i]);
         //        legend.innerHTML = shortName.generateLegend();
 
-    }
+    }*/
 
     $.preloadImages("img/portfolio/img-01.jpg", "img/portfolio/img-02.jpg", "img/portfolio/img-03.jpg", "img/portfolio/img-04.jpg", "img/portfolio/img-05.jpg", "img/portfolio/img-06.jpg", "img/portfolio/img-07.jpg", "img/portfolio/img-08.jpg", "img/portfolio/logo_ryan_2017.jpg", "img/portfolio/tei-post.jpg");
 
@@ -422,19 +359,18 @@ $(function () {
 
     //    var a = document.querySelector('.blur-image');
     var grid = document.querySelector(".grid");
-    var page = $id('page');
-    var infoBtn = $id("btnInfographics");
-    var infoDiv = $id("infographics");
+    var infoBtn = getElementById("btnInfographics");
+    var infoDiv = getElementById("infographics");
     var footer = $('footer');
 
     btn = document.querySelector("header #togglePage");
     addEvent(btn, "click", function () {
 
-        $(page, infoBtn, infoDiv, footer).removeAttr('style');
+        $(MY_OBJECT.CONTAINERS.page, infoBtn, MY_OBJECT.CONTAINERS.infoGraphics, footer).removeAttr('style');
         showOverlay();
         setTimeout(function () {
             if (!hasClass(grid, "IsActive")) {
-                removeClass(infoDiv, "IsActive");
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
                 addClass(grid, "IsActive");
                 btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><title>Off</title><path d="M42 12H18C8.1 12 0 20.1 0 30s8.1 18 18 18h24c9.9 0 18-8.1 18-18S51.9 12 42 12zM18 38c0 0.6-0.4 1-1 1s-1-0.4-1-1V22c0-0.6 0.4-1 1-1s1 0.4 1 1V38zM42 43c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13S49.2 43 42 43z" /></svg>';
                 // LOAD SIEMA EDUCATION
@@ -443,7 +379,7 @@ $(function () {
                 // console.log('destroying');
                 SIEMA.destroySiema();
                 SIEMA.mySiema=null;
-                removeClass(infoDiv, "IsActive");
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
                 removeClass(grid, "IsActive");
                 btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60"><title>On</title><path d="M42 12H18C8.1 12 0 20.1 0 30s8.1 18 18 18h24c9.9 0 18-8.1 18-18S51.9 12 42 12zM18 43c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13S25.2 43 18 43zM49.7 26.7l-8 8C41.5 34.9 41.3 35 41 35s-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1 0-1.4s1-0.4 1.4 0L41 32.6l7.3-7.3c0.4-0.4 1-0.4 1.4 0S50.1 26.3 49.7 26.7z" /></svg>';
             }
@@ -459,28 +395,28 @@ $(function () {
 
         this.style.pointerEvents = 'none';
 
-        if (!hasClass(infoDiv, "IsActive")) {
+        if (!hasClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive")) {
 
             window.scroll({
                 top: 0,
                 behavior: 'smooth'
             });
             setTimeout(function () {
-                addClass(infoDiv, "IsActive");
+                addClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
             }, 300);
 
             setTimeout(function () {
-                $(page, footer).slideUp(200);
+                $(MY_OBJECT.CONTAINERS.page, footer).slideUp(200);
                 $(infoBtn).removeAttr('style');
             }, 600);
 
         } else {
 
             this.style.pointerEvents = 'none';
-            $(page, footer).slideDown(200);
+            $(MY_OBJECT.CONTAINERS.page, footer).slideDown(200);
 
             setTimeout(function () {
-                removeClass(infoDiv, "IsActive");
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
                 $(infoBtn).removeAttr('style');
                 //                window.scroll({
                 //                    top: 0,
@@ -494,11 +430,11 @@ $(function () {
     if (window.attachEvent) {
         window.attachEvent('onresize', function () {
 
-            if (window.matchMedia("(max-width: 1024px)").matches && hasClass(infoDiv, "IsActive")) {
+            if (window.matchMedia("(max-width: 1024px)").matches && hasClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive")) {
 
                 // console.log(' + 1024px onresize');
-                $(page, footer).css('display', 'block');
-                removeClass(infoDiv, "IsActive");
+                $(MY_OBJECT.CONTAINERS.page, footer).css('display', 'block');
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
             } else {
                 // console.log(' - 1024px onresize');
 
@@ -506,11 +442,11 @@ $(function () {
         });
     } else if (window.addEventListener) {
         window.addEventListener('resize', function () {
-            if (window.matchMedia("(max-width: 1024px)").matches && hasClass(infoDiv, "IsActive")) {
+            if (window.matchMedia("(max-width: 1024px)").matches && hasClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive")) {
 
                 // console.log(' + 1024px resize');
-                $(page, footer).css('display', 'block');
-                removeClass(infoDiv, "IsActive");
+                $(MY_OBJECT.CONTAINERS.page, footer).css('display', 'block');
+                removeClass(MY_OBJECT.CONTAINERS.infoGraphics, "IsActive");
             } else {
                 // console.log(' - 1024px resize');
 
@@ -519,4 +455,20 @@ $(function () {
     } else {
         //The browser does not support Javascript event binding
     }
+});
+
+/* ------------------ */
+// WHEN DOCUMENT RDY //
+/* ------------------ */
+window.addEventListener("load", function () {
+
+    /* --------------------------- */
+    // LOAD TYPEWRITTER AT HEADER //
+    /* -------------------------- */
+
+    window.ityped.init(MY_OBJECT.CONTAINERS.sono, {
+        strings: ['Ryan Serrano', 'creativo', 'progettista', 'sviluppatore', 'sognatore'],
+        loop: true
+    });
+
 });

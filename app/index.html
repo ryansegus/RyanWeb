@@ -25,30 +25,19 @@
     </script>
 </head>
 <body>
-<div class="overlay"></div>
+<div class="overlay" id="overlay"></div>
 <div class="grid">
     <header>
         <div class="headerContainer lazyload blur-up homeBg" data-sizes="auto"
-             data-bgset="img/bg/landscape.jpg 200w, img/bg/landscape.jpg 600w" data-sizes="auto"
+             data-bgset="img/bg/landscape.jpg 200w, img/bg/landscape.jpg 600w"
              style="object-fit: cover;">
             <div class="flexWrap">
                 <div class="logo">
                     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"
                          width="80" height="80">
-                        <defs>
-                            <style>.cls-1 {
-                                fill: #FFFFFF;
-                            }
-
-                            .cls-2 {
-                                fill: #8dc63f;
-                            }</style>
-                        </defs>
                         <title></title>
-                        <path class="cls-1"
-                              d="M37.44,20.3V13.2A5.48,5.48,0,0,0,32.68,8L32,7.88v-5l.88.08A10.53,10.53,0,0,1,42.6,13.2V20.3Z"></path>
-                        <path class="cls-2"
-                              d="M47.32,72.12a5.44,5.44,0,0,1-4.72-5.24v-19A10.16,10.16,0,0,0,38.81,40a10.16,10.16,0,0,0,3.79-7.84V22.53H37.44v9.62a5.48,5.48,0,0,1-4.76,5.24l-.68.08h0v5h0l.68.08a5.48,5.48,0,0,1,4.76,5.24v19c0,5.28,4.12,10.28,9.64,10.28H48v-5Z"></path>
+                        <path d="M37.44,20.3V13.2A5.48,5.48,0,0,0,32.68,8L32,7.88v-5l.88.08A10.53,10.53,0,0,1,42.6,13.2V20.3Z" fill="#FFFFFF"></path>
+                        <path d="M47.32,72.12a5.44,5.44,0,0,1-4.72-5.24v-19A10.16,10.16,0,0,0,38.81,40a10.16,10.16,0,0,0,3.79-7.84V22.53H37.44v9.62a5.48,5.48,0,0,1-4.76,5.24l-.68.08h0v5h0l.68.08a5.48,5.48,0,0,1,4.76,5.24v19c0,5.28,4.12,10.28,9.64,10.28H48v-5Z" fill="#8dc63f"></path>
                     </svg>
                 </div>
                 <div class="hero">Sono
@@ -75,13 +64,13 @@
         <!-- EDUCATION (SIEMA SLIDER) -->
         <section class="boxPadding">
             <h2>Percorso Formativo</h2>
-            <div class="siema__layout">
-                <button class="siema__arrowBtn chevron prev" id="prevEducation"></button>
-                <div class="siema__mainContent">
+            <div class="siema-layout">
+                <button class="siema-arrowBtn chevron prev" id="prevEducation"></button>
+                <div class="siema-mainContent">
                     <!-- HERE GOES THE TEMPLATE -->
                     <div id="education" class="siema"></div>
                 </div>
-                <button class="siema__arrowBtn chevron next" id="nextEducation"></button>
+                <button class="siema-arrowBtn chevron next" id="nextEducation"></button>
             </div>
         </section>
         <!-- EXPERIENCE -->
@@ -121,8 +110,7 @@
 </div>
 <script id="aboutMeTypologyTmpl" type="text/template">
     {{#typology}}
-    <div class="lazyload blur-up" data-sizes="auto" data-bgset="img/bg/{{bgImg}}.jpg 200w, img/bg/{{bgImg}}.jpg 400w"
-         data-sizes="auto" style="object-fit: cover;">
+    <div class="lazyload blur-up" data-sizes="auto" data-bgset="img/bg/{{bgImg}}.jpg 200w, img/bg/{{bgImg}}.jpg 400w" style="object-fit: cover;">
         <h2>Tipologia, {{type}}</h2>
         <p>{{{description}}}</p>
     </div>
@@ -131,16 +119,15 @@
 <script id="educationTmpl" type="text/template">
     {{#education}}
     <div>
-        <div class="siema__title">{{title}}</div>
-        <div class="siema__place">{{place}}</div>
-        <div class="siema__date">{{date}}</div>
+        <div class="siema-title">{{title}}</div>
+        <div class="siema-place">{{place}}</div>
+        <div class="siema-date">{{date}}</div>
     </div>
     {{/education}}
 </script>
 <script id="expTmpl" type="text/template">
     {{#experience}}
     <dt class="experience__header experience__company">{{company}}
-        <span>
             <div class="buttonWrap js-experienceButton">
                 <div class="inner right">
                     <span class="left">
@@ -153,14 +140,13 @@
                 <span class="right"></span>
             </div>
             </div>
-        </span>
     </dt>
     <dd class="experience__body">
-        <hgroup>
+        <!--<hgroup> DEPRECATED -->
             <h3 class="experience__position">{{{position}}}</h3>
             <h4 class="experience__date">{{address}} ({{date}})</h4>
             <h5 class="experience__responsability">{{responsability}}</h5>
-        </hgroup>
+        <!--</hgroup> DEPRECATED-->
 
         <ul>
             {{#tasks}}
@@ -273,7 +259,7 @@
 <script src="js/helpers.js"></script>
 <script src="js/constants.js"></script>
 <script src="js/loadSections.js"></script>
-<script src="js/softwares.js"></script>
+<!--<script src="js/softwares.js"></script>-->
 <script src="js/socials.js"></script>
 <script src="plugins/bower_components/lazysizes/plugins/bgset/ls.bgset.min.js"></script>
 <script src="plugins/bower_components/lazysizes/plugins/parent-fit/ls.parent-fit.min.js"></script>
@@ -284,6 +270,7 @@
 <script src="plugins/bower_components/chart.js/dist/Chart.min.js"></script>
 <script src="js/experience.js"></script>
 <script src="js/educationCarousel.js"></script>
+<script src="js/infographicsCharts.js"></script>
 <!--<script src="https://pawelgrzybek.com/siema/assets/siema.min.js"></script>-->
 <script src="js/main.js"></script>
 <!-- endbuild -->
