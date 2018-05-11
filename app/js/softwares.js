@@ -1,4 +1,4 @@
-var softwares = [
+const softwares = [
     {
         labelIt: "Mac",
         shortName: "Mac",

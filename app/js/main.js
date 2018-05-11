@@ -1,6 +1,3 @@
-/* VARS */
-
-
 const portafoglio = [
     ['img-01.jpg', 'Grupo Menosesmas', 'Logotipo', 'Nel corso del tempo abbiamo migliorato i nostri gusti e finalmente è arrivato all&#39;immagine che riassume l&#39;essenza della nostra azienda.'],
     ['img-02.jpg', 'Natalia Marcano', 'identidad', 'Un design minimalista di biglietti personali, il cui dado fa l&#39;impatto dei clienti di questo grande architetto.'],
@@ -13,27 +10,6 @@ const portafoglio = [
     ['logo_ryan_2017.jpg', 'Ryan Serrano', 'logotipo', 'Versione attuale del logo personale, mantenendo il concetto della versione precedente ho ridotto gli elementi per una presentazione più minimalista.'],
     ['tei-post.jpg', 'Tu Enlace Inmobiliario', 'Post reti sociali', 'Immagine presa per promuovere l&#39;immagine aziendale dell&#39;azienda in Instagram e in altre reti sociali.']
 ];
-
-const langObj = {
-    bgColor: ["#8dc63f", "#1d1d1d"],
-    language: [
-        {
-            labelIt: "Spagnolo",
-            shortName: "Es",
-            value: 90
-        },
-        {
-            labelIt: "Inglese",
-            shortName: "En",
-            value: 80
-        },
-        {
-            labelIt: "Italiano",
-            shortName: "It",
-            value: 60
-        }
-    ]
-};
 
 /* --------------------- */
 // SHOW OVERLAY FUNCTION //
@@ -169,21 +145,19 @@ $(function () {
         })
     });
 
-    /* CHARTS JS */
-
     /* GLOBALS CHART CONFIGURATION */
-    Chart.defaults.global.layout.padding = 0;
+    /*Chart.defaults.global.layout.padding = 0;
     Chart.defaults.global.legend.position = 'bottom';
 
-    /* ARCS CHART CONFIGURATION */
+    /!* ARCS CHART CONFIGURATION *!/
     Chart.defaults.global.elements.arc.backgroundColor = 'rgb(29, 29, 29)';
     Chart.defaults.global.elements.arc.hoverBorderColor = 'rgb(255, 255, 255)';
 
-    /*  DOUGHNUT CHART CONFIGURATION */
+    /!*  DOUGHNUT CHART CONFIGURATION *!/
     Chart.defaults.doughnut.cutoutPercentage = 60;
     Chart.defaults.global.tooltips.bodyfontFamily = 'Encode Sans Condensed';
 
-    /* CREATE LANGUAGES OBJECTS langObj  */
+    /!* CREATE LANGUAGES OBJECTS langObj  *!/
     var objArr = [];
     var objArrLength = Object.keys(langObj.language).length;
 
@@ -233,9 +207,9 @@ $(function () {
         });
     }
 
-    /* CREATE DIVS & CANVAS WITH OBJ */
+    /!* CREATE DIVS & CANVAS WITH OBJ *!/
     var ctx = [];
-    var Container = document.getElementById("languages");
+    let Container = document.getElementById("languages");
 
     for (i = 0; i < objArrLength; i++) {
         divCol = document.createElement("div");
@@ -257,7 +231,7 @@ $(function () {
         canvasContainer.appendChild(canvas);
     }
 
-    /* DRAW LANGUAGE CHARTS & LEGENDS WITH OBJ */
+    /!* DRAW LANGUAGE CHARTS & LEGENDS WITH OBJ *!/
     newObjArrLength = Object.keys(objArr).length;
     for (i = 0; i < newObjArrLength; i++) {
 
@@ -273,7 +247,7 @@ $(function () {
 
     }
 
-    /* CREATE SOFTWARES OBJECTS softwaresObj  */
+    /!* CREATE SOFTWARES OBJECTS softwaresObj  *!/
     var softwaresObj = [];
     var softwaresObjLength = Object.keys(softwares).length;
     //    document.write(softwaresObjLength);
@@ -328,7 +302,7 @@ $(function () {
         });
     }
 
-    /* CREATE SOFTWARES DIVS & CANVAS WITH OBJ softwaresObj */
+    /!* CREATE SOFTWARES DIVS & CANVAS WITH OBJ softwaresObj *!/
     var ctx = [];
     var el = document.getElementById("whatiuse");
 
@@ -339,10 +313,10 @@ $(function () {
         canvasContainer = document.createElement("div");
 
         // CREATE IMG WITH ICON SVG
-        /*img = document.createElement("img");
+        /!*img = document.createElement("img");
         img.setAttribute("class", "langLegend");
         img.setAttribute("src", "img/icon/" + icon + ".svg"); //softwares[i].icon);
-        img.setAttribute("alt", icon);*/
+        img.setAttribute("alt", icon);*!/
 
         // CREATE ICON SVG INLINE
         svg = document.createElement("div");
@@ -363,7 +337,7 @@ $(function () {
     }
     //    console.log(softwaresObj)
 
-    /* DRAW CHARTS & LEGENDS WITH OBJ */
+    /!* DRAW CHARTS & LEGENDS WITH OBJ *!/
     newObjArrLength = Object.keys(softwaresObj).length;
     for (i = 0; i < newObjArrLength; i++) {
 
@@ -375,7 +349,7 @@ $(function () {
         shortName = new Chart(ctx, softwaresObj[i]);
         //        legend.innerHTML = shortName.generateLegend();
 
-    }
+    }*/
 
     $.preloadImages("img/portfolio/img-01.jpg", "img/portfolio/img-02.jpg", "img/portfolio/img-03.jpg", "img/portfolio/img-04.jpg", "img/portfolio/img-05.jpg", "img/portfolio/img-06.jpg", "img/portfolio/img-07.jpg", "img/portfolio/img-08.jpg", "img/portfolio/logo_ryan_2017.jpg", "img/portfolio/tei-post.jpg");
 

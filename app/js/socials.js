@@ -1,4 +1,4 @@
-var socials = [
+const socials = [
     {
         labelIt: "Facebook",
         linkTo: "https://www.facebook.com/ryansegus",

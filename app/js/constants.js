@@ -25,6 +25,7 @@ const MY_OBJECT = {
         "page":getElementById('page'),
         "sono":getElementById('sono'),
         "infoGraphics":getElementById("infographics")
+        // "languages":getElementById('languages')
     },
     WORDS: {
         'LEARNING': 'Imparando',
